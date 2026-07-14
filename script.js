@@ -47,7 +47,7 @@ const translations = {
     toolOperateList: 'Linux · Docker · Proxmox · CI/CD · Logging · Backups', toolData: 'Data', toolDataList: 'PostgreSQL · MySQL · Redis · Validation · Data mapping',
     toolExpanding: 'Expanding', toolBusiness: 'Business', toolBusinessList: 'Discovery · Architecture · E-commerce · Mentoring · Ownership',
     contactEyebrow: '05 / Contact', contactTitle: 'Have a difficult system to connect?', copyEmail: 'Copy email',
-    cvSoon: 'CV PDF — coming soon', cvTitle: 'Add the final PDF file to assets/ and update this link',
+    viewCv: 'View CV (PL)',
     footerText: 'Built for clarity, reliability, and the web.', backTop: 'Back to top', emailCopied: 'Email copied',
     openMenu: 'Open menu', closeMenu: 'Close menu', switchLanguage: 'Switch to Polish'
   },
@@ -99,7 +99,7 @@ const translations = {
     toolOperateList: 'Linux · Docker · Proxmox · CI/CD · Logi · Kopie zapasowe', toolData: 'Dane', toolDataList: 'PostgreSQL · MySQL · Redis · Walidacja · Mapowanie danych',
     toolExpanding: 'Rozwijam', toolBusiness: 'Biznes', toolBusinessList: 'Analiza potrzeb · Architektura · E-commerce · Mentoring · Odpowiedzialność',
     contactEyebrow: '05 / Kontakt', contactTitle: 'Masz trudny system do zintegrowania?', copyEmail: 'Kopiuj e-mail',
-    cvSoon: 'CV PDF — wkrótce', cvTitle: 'Dodaj finalny plik PDF do katalogu assets/ i zaktualizuj ten link',
+    viewCv: 'Zobacz CV (PL)',
     footerText: 'Zbudowane z myślą o przejrzystości, niezawodności i sieci.', backTop: 'Wróć na górę', emailCopied: 'Adres e-mail skopiowany',
     openMenu: 'Otwórz menu', closeMenu: 'Zamknij menu', switchLanguage: 'Przełącz na język angielski'
   }

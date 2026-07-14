@@ -27,7 +27,6 @@ The project page will normally be available at `https://dymirt.github.io/Dymirt/
 ## Before publishing
 
 - Replace the `[N]` and `[X]` case-study placeholders with verified metrics.
-- Add the final CV PDF to `assets/` and replace the disabled CV placeholder in `index.html` with a link.
 - Confirm the contact email and project links.
 
 ## Stack
