@@ -30,12 +30,13 @@ h1, h2, h3 { word-spacing: .11em; }
 .metric { display: flex; min-height: 8rem; flex-direction: column; justify-content: center; padding: 1.5rem 1rem; }
 .metric strong { font-size: clamp(1rem, 2vw, 1.25rem); }
 .metric span { margin-top: .35rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .65rem; text-transform: uppercase; letter-spacing: .12em; color: #87928d; }
-.expertise-card { position: relative; min-height: 34rem; overflow: hidden; background: #121720; padding: 2.25rem; transition: background .3s ease, transform .3s ease; }
+.expertise-card { position: relative; min-height: 29rem; overflow: hidden; background: #121720; padding: 2.25rem; transition: background .3s ease, transform .3s ease; }
 .expertise-card:hover { background: #171d27; transform: translateY(-2px); }
 .card-number { position: absolute; right: 1.5rem; top: 1.5rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .7rem; color: #74807b; }
 .card-icon { height: 4rem; width: 4rem; color: #d59a6a; }
-.expertise-card h3 { margin-top: 7rem; font-size: 1.7rem; font-weight: 600; letter-spacing: -.035em; }
+.expertise-card h3 { margin-top: 2rem; font-size: 1.7rem; font-weight: 600; letter-spacing: -.035em; }
 .expertise-card p { margin-top: 1.2rem; line-height: 1.7; color: #9aa4b2; }
+.expertise-card p strong, .case-study h3 + p strong { color: #f1eee8; font-weight: 600; }
 .expertise-card ul { margin-top: 2rem; border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.25rem; color: #a6b0be; }
 .expertise-card li { padding-block: .32rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .72rem; }
 .case-study { display: grid; gap: 1.5rem; border-radius: 1.5rem; border: 1px solid rgba(255,255,255,.1); background: #121720; padding: 1.5rem; transition: transform .25s ease, border-color .25s ease, background .25s ease; }
