@@ -15,7 +15,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>document.documentElement.classList.add('js'); setTimeout(() => { if (!document.documentElement.classList.contains('app-ready')) document.documentElement.classList.remove('js'); }, 2000);</script>
   <link rel="stylesheet" href="tailwind.css?v=20260719-2">
-  <link rel="stylesheet" href="styles.css?v=20260719-3">
+  <link rel="stylesheet" href="styles.css?v=20260719-4">
 </head>
 <body class="bg-ink text-paper antialiased selection:bg-acid selection:text-ink">
   <a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
@@ -182,18 +182,21 @@
           </div>
         </article>
 
-        <article class="case-study reveal">
+        <article id="loyalty-platform" class="case-study reveal">
           <div class="case-index">CASE / 04</div>
           <div>
-            <p class="case-kicker" data-i18n="case4Kicker">Client loyalty product</p>
-            <h3 data-i18n="case4Title">Personalized loyalty cards for a café</h3>
-            <p data-i18n-html="case4Text"><span class="comparison-part"><strong>Before:</strong> customer and loyalty data stayed in the Dotykačka point-of-sale system, with no personalized card customers could keep on their phones.</span><span class="comparison-part"><strong>After:</strong> I connected Dotykačka to a Django application that creates a personal café loyalty card for Apple Wallet or Google Wallet and gives staff one place to manage the program.</span></p>
-            <div class="tag-row"><span>Dotykačka</span><span>Apple Wallet</span><span>Google Wallet</span><span>Django</span></div>
+            <p class="case-kicker" data-i18n="case4Kicker">Loyalty-card platform · Public source</p>
+            <h3 data-i18n="case4Title">Rebuilding a loyalty-card system for more businesses</h3>
+            <p data-i18n-html="case4Text"><span class="comparison-part"><strong>Before:</strong> the first version served one business. Customer registration, physical-card inventory, branding, and external integrations shared one setup, so adding another business would have required custom code and could have mixed settings or data.</span><span class="comparison-part"><strong>After:</strong> I rebuilt it as a Django platform that keeps every business separate. A customer scans a physical card; the system assigns it, records consent, synchronizes the customer with Dotykačka, prepares a personal Apple Wallet or Google Wallet card, updates Brevo, and sends the card by email. Each business has separate branding, inventory, users, and encrypted integration credentials. If an external service fails temporarily, background jobs can retry safely.</span></p>
+            <div class="tag-row"><span>Django</span><span>Dotykačka</span><span>Apple Wallet</span><span>Google Wallet</span><span>Brevo</span><span>MariaDB</span></div>
           </div>
           <div class="case-result">
             <p data-i18n="engineeringEvidence">What now works</p>
-            <strong data-i18n-html="case4Result">Dotykačka → Django → mobile wallet<br>Apple Wallet + Google Wallet<br>Personalized customer cards</strong>
-            <span data-i18n="case4Note">The client-facing product is described here; private source code and customer data remain private.</span>
+            <strong data-i18n-html="case4Result">267 customer records preserved<br>Complete 600-card inventory preserved<br>228 automated tests · SQLite + MariaDB</strong>
+            <div class="case-note">
+              <span data-i18n="case4Note">The technical conversion is complete. Adding more businesses remains disabled until final human, provider, and printing checks. Public source is available; customer data, credentials, and generated Wallet cards stay private.</span>
+              <a class="case-source-link" href="https://github.com/Dymirt/loyalty_cards" target="_blank" rel="noreferrer" data-i18n="viewPublicSource">View public source</a>
+            </div>
           </div>
         </article>
       </div>
@@ -294,6 +297,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite" data-i18n="emailCopied">Email copied</div>
-  <script src="script.js?v=20260719-3"></script>
+  <script src="script.js?v=20260719-4"></script>
 </body>
 </html>
