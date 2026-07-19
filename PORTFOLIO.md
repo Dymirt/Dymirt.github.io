@@ -1,4 +1,4 @@
-# Dmytro Kolida — Portfolio
+# Dmytro Kolida, Portfolio
 
 A bilingual GitHub Pages portfolio positioning Dmytro Kolida as a Solutions & Integration Engineer through public work and verified, anonymized evidence from private production repositories.
 

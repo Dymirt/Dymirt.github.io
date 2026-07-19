@@ -48,6 +48,8 @@ h1, h2, h3 { word-spacing: .11em; }
 .expertise-card h3 { margin-top: 2rem; font-size: 1.7rem; font-weight: 600; letter-spacing: -.035em; }
 .expertise-card p { margin-top: 1.2rem; line-height: 1.7; color: #9aa4b2; }
 .expertise-card p strong, .case-study h3 + p strong { color: #f1eee8; font-weight: 600; }
+.comparison-part { display: block; }
+.comparison-part + .comparison-part { margin-top: .8rem; }
 .expertise-card ul { margin-top: 2rem; border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.25rem; color: #a6b0be; }
 .expertise-card li { padding-block: .32rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .72rem; }
 .case-study { display: grid; gap: 1.5rem; border-radius: 1.5rem; border: 1px solid rgba(255,255,255,.1); background: #121720; padding: 1.5rem; transition: transform .25s ease, border-color .25s ease, background .25s ease; }
@@ -133,7 +135,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #d59a6a; outline-offs
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .75s ease var(--delay, 0ms), transform .75s cubic-bezier(.2,.7,.2,1) var(--delay, 0ms); }
 .js .reveal.visible { opacity: 1; transform: translateY(0); }
 @media (min-width: 640px) { .section-shell, .mentor-section, .mentor-audience-grid { padding-inline: 2rem; } .metric { padding-inline: 1.5rem; } .mentoring-callout-copy, .advisory-cta-copy { padding: 3rem; } }
-@media (min-width: 768px) { .section-heading { grid-template-columns: 1fr auto; } .section-heading .eyebrow { grid-column: 1 / -1; } .case-study { grid-template-columns: 7rem 1fr 13rem; padding: 2rem; } .achievement { grid-template-columns: 6rem 1fr auto; padding: 2rem; } .achievement-actions { justify-content: flex-end; } .tool-grid div { display: grid; grid-template-columns: 9rem 1fr; align-items: center; } .tool-grid p { margin-top: 0; } .mentor-offer-grid { grid-template-columns: repeat(3, 1fr); } .mentor-process-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px) { .section-heading { grid-template-columns: 1fr auto; } .section-heading .eyebrow { grid-column: 1 / -1; } .case-study { grid-template-columns: 5rem minmax(0, 1fr); padding: 2rem; } .case-result { grid-column: 1 / -1; min-width: 0; } .achievement { grid-template-columns: 6rem 1fr auto; padding: 2rem; } .achievement-actions { justify-content: flex-end; } .tool-grid div { display: grid; grid-template-columns: 9rem 1fr; align-items: center; } .tool-grid p { margin-top: 0; } .mentor-offer-grid { grid-template-columns: repeat(3, 1fr); } .mentor-process-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) {
   .section-shell { padding: 9rem 3rem; }
   .hero-layout { display: flex; max-width: none; padding: 5rem max(3rem, calc((100vw - 88rem) / 2 + 3rem)) 6rem; }
@@ -144,6 +146,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid #d59a6a; outline-offs
   .hero-portrait img { object-position: 52% 14%; }
   .hero-portrait-card { left: auto; right: max(3rem, calc((100vw - 88rem) / 2 + 3rem)); bottom: 3rem; width: min(27rem, 38vw); }
   .ownership-note { right: max(3rem, calc((100vw - 88rem) / 2 + 3rem)); top: 4rem; background: rgba(11,14,19,.9); backdrop-filter: blur(12px); }
+  .case-result { display: grid; grid-template-columns: minmax(7rem, .45fr) minmax(0, 1.2fr) minmax(14rem, .85fr); align-items: start; gap: 2rem; padding: 1.5rem; }
+  .case-result strong { margin: 0; }
+  .case-result span { font-size: .75rem; line-height: 1.6; }
   .mentor-hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(22rem, .92fr); padding: 5rem 3rem 6rem; }
   .mentoring-callout { grid-template-columns: 1fr 1fr; }
   .mentoring-callout-visual { min-height: 39rem; }
