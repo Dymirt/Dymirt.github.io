@@ -15,7 +15,7 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <script>document.documentElement.classList.add('js'); setTimeout(() => { if (!document.documentElement.classList.contains('app-ready')) document.documentElement.classList.remove('js'); }, 2000);</script>
   <link rel="stylesheet" href="../tailwind.css?v=20260719-2">
-  <link rel="stylesheet" href="../styles.css?v=20260719-3">
+  <link rel="stylesheet" href="../styles.css?v=20260719-5">
 </head>
 <body class="mentor-page bg-ink text-paper antialiased selection:bg-acid selection:text-ink">
   <a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
@@ -35,9 +35,13 @@
       </div>
 
       <div class="flex items-center gap-3">
-        <button id="languageToggle" class="language-toggle" type="button" aria-label="Switch to Polish" title="Switch to Polish">
-          <span class="language-current">EN</span><span class="language-separator">/</span><span class="language-next">PL</span>
-        </button>
+        <div id="languageToggle" class="language-toggle" role="group" aria-label="Language selection" data-i18n-aria="languageLabel">
+          <button class="language-option" type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+          <span class="language-separator" aria-hidden="true">/</span>
+          <button class="language-option" type="button" data-language="pl" lang="pl" aria-label="Polski" aria-pressed="false">PL</button>
+          <span class="language-separator" aria-hidden="true">/</span>
+          <button class="language-option" type="button" data-language="it" lang="it" aria-label="Italiano" aria-pressed="false">IT</button>
+        </div>
         <button id="menuButton" class="grid h-10 w-10 place-items-center rounded-full border border-white/15 xl:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -65,7 +69,7 @@
           <h1 data-i18n="heroTitle">Good questions lead to decisions you can own.</h1>
           <p data-i18n="heroText">As a Space Eagle at 42 Warsaw, I mentored new participants during the four-week Piscine, an intensive, on-campus introduction to peer-to-peer and project-based learning. I helped participants navigate the programme, reason through problems, and find their own next steps, while also supporting the organisation of the learning environment. I bring the same question-led approach to mentoring at HackYeah 2026.</p>
           <div class="mentor-hero-actions">
-            <a class="button-primary" href="mailto:dmytrokolida@gmail.com?subject=Technical%20mentoring"><span data-i18n="describeProblem">Tell me your goal</span> <span aria-hidden="true">↗</span></a>
+            <a class="button-primary" href="mailto:dmytrokolida@gmail.com?subject=Technical%20mentoring" data-i18n-href="mentoringMailto"><span data-i18n="describeProblem">Tell me your goal</span> <span aria-hidden="true">↗</span></a>
             <a class="button-secondary" href="../#work" data-i18n="viewWork">View engineering work</a>
           </div>
         </div>
@@ -153,7 +157,7 @@
           <p class="eyebrow" data-i18n="contactEyebrow">04 / Mentoring</p>
           <h2 data-i18n="contactTitle">What are you trying to achieve?</h2>
           <p data-i18n="contactText">If you are working through a technical project and feel stuck, send me your goal, what you have already tried, and the question you cannot answer yet. If my experience is relevant, we can talk.</p>
-          <a class="button-primary" href="mailto:dmytrokolida@gmail.com?subject=Technical%20mentoring"><span data-i18n="startConversation">Ask about mentoring</span> <span aria-hidden="true">↗</span></a>
+          <a class="button-primary" href="mailto:dmytrokolida@gmail.com?subject=Technical%20mentoring" data-i18n-href="mentoringMailto"><span data-i18n="startConversation">Ask about mentoring</span> <span aria-hidden="true">↗</span></a>
         </div>
         <figure class="advisory-cta-photo">
           <img src="../assets/dmytro-advisory-960.webp" srcset="../assets/dmytro-advisory-960.webp 960w, ../assets/dmytro-advisory-1400.webp 1400w" sizes="(min-width: 1440px) 970px, (min-width: 1024px) 68vw, 92vw" alt="Dmytro Kolida reflecting over coffee" data-i18n-alt="advisoryAlt" width="1400" height="2098" loading="lazy" decoding="async">
@@ -169,6 +173,6 @@
     </div>
   </footer>
 
-  <script src="mentoring.js?v=20260719-3"></script>
+  <script src="mentoring.js?v=20260719-6"></script>
 </body>
 </html>

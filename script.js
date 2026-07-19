@@ -51,7 +51,7 @@ const translations = {
     contactEyebrow: '06 / Contact', contactTitle: 'Have a difficult system to connect?', copyEmail: 'Copy email',
     viewCv: 'View CV (PL)',
     footerText: 'Built for clarity, reliability, and the web.', backTop: 'Back to top', emailCopied: 'Email copied',
-    openMenu: 'Open menu', closeMenu: 'Close menu', switchLanguage: 'Switch to Polish'
+    openMenu: 'Open menu', closeMenu: 'Close menu', languageLabel: 'Language selection'
   },
   pl: {
     metaTitle: 'Dmytro Kolida, Inżynier rozwiązań i integracji',
@@ -105,21 +105,85 @@ const translations = {
     contactEyebrow: '06 / Kontakt', contactTitle: 'Masz trudny system do zintegrowania?', copyEmail: 'Kopiuj e-mail',
     viewCv: 'Zobacz CV (PL)',
     footerText: 'Zbudowane z myślą o przejrzystości, niezawodności i sieci.', backTop: 'Wróć na górę', emailCopied: 'Adres e-mail skopiowany',
-    openMenu: 'Otwórz menu', closeMenu: 'Zamknij menu', switchLanguage: 'Przełącz na język angielski'
+    openMenu: 'Otwórz menu', closeMenu: 'Zamknij menu', languageLabel: 'Wybór języka'
+  },
+  it: {
+    metaTitle: 'Dmytro Kolida, Solutions & Integration Engineer',
+    metaDescription: 'Dmytro Kolida, ingegnere di soluzioni e integrazioni. Collego software aziendali, dati e servizi esterni, modernizzo sistemi legacy e ne garantisco l’operatività.',
+    ogDescription: 'Collego software aziendali, dati e servizi esterni per rendere il lavoro quotidiano più rapido, più sicuro e con meno attività manuali.',
+    skip: 'Vai al contenuto', navLabel: 'Navigazione principale', homeLabel: 'Dmytro Kolida, pagina iniziale', navExpertise: 'Competenze', navWork: 'Progetti selezionati', navAbout: 'Chi sono', navMentoring: 'Mentoring', navContact: 'Contatti',
+    availability: 'Disponibile per nuove opportunità', portraitAlt: 'Dmytro Kolida in abito grigio davanti a uno sfondo scuro da studio', location: 'Nei pressi di Varsavia, Polonia',
+    context: 'Ingegneria + operatività + contesto aziendale', ownership: 'RESPONSABILITÀ: END → END', role: 'Solutions & Integration Engineer',
+    heroTitle: 'Sistemi che<br><span class="text-acid">funzionano davvero.</span>',
+    heroDescription: 'Collego software aziendali, dati e servizi esterni per rendere il lavoro quotidiano più rapido, più sicuro e con meno attività manuali, dalla prima analisi del problema fino al rilascio e al supporto.',
+    exploreWork: 'Scopri i progetti selezionati', startConversation: 'Parliamone',
+    metricBackend: 'Sistemi backend', metricProduction: 'Gestione dei sistemi in produzione', metricIntegration: 'Integrazioni e dati', nineYears: '9 anni', metricOwnership: 'Gestione di un e-commerce',
+    expertiseEyebrow: '01 / Competenze', expertiseTitle: 'Un solo ingegnere per l’intero sistema.',
+    expertiseIntro: 'Tu spieghi cosa deve funzionare. Io individuo i sistemi coinvolti, progetto e realizzo l’integrazione, la porto in produzione e ne resto responsabile quando qualcosa non funziona.',
+    expertise1Title: 'Integrare sistemi', expertise1Text: '<span class="comparison-part"><strong>Prima:</strong> le persone copiano gli stessi dati tra applicazioni o aggirano sistemi che non comunicano tra loro.</span><span class="comparison-part"><strong>Dopo:</strong> le applicazioni scambiano automaticamente i dati corretti tramite API, database o file.</span>',
+    expertise1Item1: 'API e servizi esterni', expertise1Item2: 'Importazione da fogli di calcolo e database', expertise1Item3: 'Validazione, log e tentativi controllati',
+    expertise2Title: 'Mantenere operativi i sistemi', expertise2Text: '<span class="comparison-part"><strong>Prima:</strong> quando qualcosa non funziona, non è chiaro se la causa sia il codice, un container, il database o la rete.</span><span class="comparison-part"><strong>Dopo:</strong> il sistema è monitorato, dispone di backup ed è più semplice da diagnosticare e ripristinare.</span>',
+    expertise2Item2: 'Monitoraggio e risoluzione dei problemi', expertise2Item3: 'Rilasci, backup e sicurezza',
+    expertise3Title: 'Modernizzare software legacy', expertise3Text: '<span class="comparison-part"><strong>Prima:</strong> procedure manuali e codice datato rendono ogni modifica lenta e rischiosa.</span><span class="comparison-part"><strong>Dopo:</strong> automazione ripetibile e test velocizzano il lavoro e rendono più sicuro il rilascio delle modifiche.</span>',
+    expertise3Item1: 'Automazione dei processi con Python', expertise3Item2: 'Modernizzazione di sistemi PHP legacy', expertise3Item3: 'Suggerimenti dell’IA con approvazione umana',
+    workEyebrow: '02 / Progetti selezionati', workTitle: 'Prima, dopo e risultati misurabili.',
+    workIntro: 'Questi esempi spiegano cosa era difficile, cosa ho cambiato e cosa funziona oggi. Il codice privato dei clienti e i dati aziendali restano riservati; mostro solo risultati verificati.',
+    modernizationKicker: 'Sistema legacy · Anonimizzato', modernizationTitle: 'Rendere più sicure le modifiche a un sistema legacy critico',
+    modernizationText: '<span class="comparison-part"><strong>Prima:</strong> importanti regole aziendali erano distribuite tra vecchio codice PHP, regole del database e job pianificati. Anche una piccola modifica poteva compromettere un altro processo.</span><span class="comparison-part"><strong>Dopo:</strong> ho mappato le aree a rischio, rimosso i file obsoleti e aggiunto test automatici, migrazioni del database ripetibili, servizi Docker e due ambienti di deployment controllati. Ora le modifiche possono essere verificate prima del rilascio, invece di affidarsi soltanto ai test manuali.</span>',
+    measuredEvidence: 'Risultati misurati', modernizationResult: '396 test automatizzati · 1.108 verifiche<br>29 rilasci documentati<br>36,3% di file in meno nel codebase',
+    modernizationNote: 'Verifica di luglio 2026: zero errori e un test che richiede credenziali è stato saltato. I dettagli aziendali restano riservati.',
+    case1Kicker: 'Importazione dei dati dei clienti · Anonimizzato', case1Title: 'Fogli di calcolo diversi, un unico importatore',
+    case1Text: '<span class="comparison-part"><strong>Prima:</strong> ogni azienda inviava file CSV, XLS o XLSX con colonne e strutture diverse. Un nuovo formato poteva bloccare l’importazione e richiedere a un programmatore di modificare il codice.</span><span class="comparison-part"><strong>Dopo:</strong> ho creato un unico processo che mappa ogni file in una struttura comune, consente all’operatore di correggere la mappatura e memorizza le configurazioni che hanno funzionato per riutilizzarle nelle importazioni successive. Una riga non valida viene registrata nel log invece di bloccare l’intero file, mentre il processo può essere interrotto e ripreso. Se non è chiaro a quale azienda appartengano i dati, l’IA può suggerire la corrispondenza più probabile, ma una persona deve approvarla prima che vengano salvati dati sensibili.</span>',
+    tagCanonicalModel: 'Mappatura flessibile delle colonne', tagRegistry: 'Registro delle aziende', tagHumanReview: 'Approvazione umana', tagAudit: 'Log degli errori', engineeringEvidence: 'Cosa funziona oggi',
+    case1Result: 'File del cliente → mappatura → formato comune<br>Nuovi formati senza modifiche al codice<br>Suggerimento dell’IA + approvazione umana', case1Note: 'La logica di abbinamento è stata verificata in 238 scenari e 25 test mirati coprono la fusione dei duplicati. I nomi e i volumi dei clienti sono omessi.',
+    case2Kicker: 'Fatturazione elettronica polacca · Anonimizzato', case2Title: 'Collegare KSeF a un sistema di fatturazione legacy',
+    case2Text: '<span class="comparison-part"><strong>Prima:</strong> il sistema PHP legacy non poteva comunicare direttamente con il Sistema nazionale polacco di fatturazione elettronica (KSeF), che richiede metodi di autenticazione e formati di fattura più recenti.</span><span class="comparison-part"><strong>Dopo:</strong> ho aggiunto un servizio Python separato che converte i dati delle fatture in XML FA(3), si autentica con KSeF, invia le fatture, ne controlla lo stato e individua una fattura già inviata. Il vecchio sistema può ora utilizzare KSeF senza una rischiosa riscrittura dell’intera applicazione.</span>',
+    tagDuplicateRecovery: 'Fatture già inviate', case2Result: 'PHP legacy → servizio Python → KSeF<br>Invio fatture &amp; verifica dello stato<br>Ricerca di una fattura già inviata',
+    case2Note: 'L’integrazione comprende quattro endpoint API, la generazione di XML FA(3) e quattro test mirati. I dettagli aziendali restano riservati.',
+    case4Kicker: 'Piattaforma per carte fedeltà · Codice pubblico', case4Title: 'Una piattaforma per carte fedeltà progettata e sviluppata da zero',
+    case4Text: '<span class="comparison-part"><strong>Prima:</strong> ho progettato e sviluppato da zero la prima versione per una sola azienda. Gestiva la registrazione dei clienti, le carte fisiche, la sincronizzazione dei clienti con Dotykačka, le carte Wallet e le e-mail, ma tutti i clienti, le impostazioni e le integrazioni erano gestiti da un’unica configurazione.</span><span class="comparison-part"><strong>Dopo:</strong> l’ho sviluppata ulteriormente come piattaforma Django che mantiene separati i dati di ogni azienda. Un cliente scansiona una carta fisica; il sistema la assegna, registra il consenso, sincronizza il cliente con Dotykačka, genera una carta personalizzata Apple Wallet o Google Wallet, aggiorna Brevo e invia la carta tramite e-mail. Ogni azienda ha una propria identità visiva, un inventario dedicato, utenti distinti e credenziali di integrazione crittografate. Se un servizio esterno non è temporaneamente disponibile, i job in background possono ripetere l’operazione in sicurezza.</span>',
+    case4Result: 'Conservati 267 record di clienti<br>Conservato l’intero inventario di 600 carte<br>228 test automatizzati · SQLite + MariaDB', case4Note: 'La trasformazione tecnica in piattaforma è completa. L’attivazione di nuove aziende resta disabilitata fino al collaudo finale del primo cliente e alle verifiche in produzione delle integrazioni esterne e del processo di stampa. Il codice sorgente è pubblico; i dati dei clienti, le credenziali e le carte Wallet generate restano riservati.', viewPublicSource: 'Vedi il codice pubblico',
+    awardTitle: 'CoinSwipe: 1° posto nel bounty DragonSwap', awardText: 'CoinSwipe è un’app Telegram che unisce la scoperta di memecoin, il trading e la possibilità di conoscere persone interessate agli stessi token. L’ho sviluppata con il mio team durante ETHWarsaw 2024; abbiamo vinto il primo posto nel bounty DragonSwap e in seguito 42 Warsaw ha presentato il progetto.', recognitionPost: 'Post di 42 Warsaw',
+    warsawMossAwardTitle: 'Eco Navigate: 3° posto', warsawMossAwardText: '<span class="comparison-part"><strong>Prima:</strong> i pianificatori di percorso confrontavano soprattutto tempo e distanza.</span><span class="comparison-part"><strong>Dopo:</strong> Eco Navigate confronta percorsi a piedi e in bicicletta a Varsavia utilizzando dati su alberi, parchi e altre aree verdi nelle vicinanze. Consiglia l’opzione più verde mostrandone distanza, tempo e deviazione aggiuntiva e mostra anche i dati in tempo reale delle stazioni che monitorano la qualità dell’aria.</span>',
+    viewProject: 'Vedi il progetto', viewDiploma: 'Vedi il diploma', diplomaAlt: 'Diploma di Dmytro Kolida per il terzo posto a HumanTech Hack 2024',
+    aboutEyebrow: '03 / Chi sono', aboutTitle: 'Ingegneria guidata dall’esperienza concreta d’impresa.',
+    aboutLead: 'Lavoro nei contesti in cui software, server, dati e operazioni aziendali quotidiane devono funzionare insieme.',
+    aboutText1: 'Il mio lavoro comprende applicazioni Python e PHP, API, SQL, Linux, Docker, problemi in produzione e modernizzazione di sistemi legacy. Nove anni alla guida del mio e-commerce mi hanno insegnato a valutare la tecnologia in base alla sua capacità di far risparmiare tempo, ridurre i rischi e funzionare in modo affidabile, non in base a quanto sia nuova.',
+    aboutText2: 'Il mio contributo è più efficace quando il punto di partenza non è chiaro, più sistemi devono scambiarsi dati e serve qualcuno che si assuma la responsabilità dalla prima conversazione fino al supporto in produzione.',
+    howIWork: 'Come lavoro', workProcess: 'Analisi → progettazione → rilascio → gestione', currentFocus: 'Focus attuale', focusText: 'Integrazioni cloud e lavoro assistito dall’IA con approvazione umana',
+    mentoringEyebrow: '04 / Mentoring', mentoringTitle: 'Le domande giuste aiutano a progredire in autonomia.', mentoringText: 'Come Space Eagle a 42 Warsaw, ho affiancato i nuovi partecipanti durante la Piscine di quattro settimane, un percorso intensivo in presenza basato sull’apprendimento tra pari e sui progetti. Li ho aiutati a ragionare sui problemi e a individuare autonomamente i passi successivi. Ho inoltre svolto attività di mentoring durante HackYeah 2026.',
+    mentoringCta: 'Scopri il mio approccio al mentoring', mentoringAlt: 'Dmytro spiega il codice accanto a un laptop mentre il suo cane ascolta', mentoringCaption: 'Spiego il codice al mio revisore più sincero.',
+    toolkitEyebrow: '05 / Strumenti', toolkitTitle: 'Gli strumenti che utilizzo per sviluppare, integrare e gestire sistemi.', toolBuild: 'Sviluppo', toolIntegrate: 'Integrazione', toolOperate: 'Gestione',
+    toolOperateList: 'Linux · Docker · Proxmox · CI/CD · Logging · Backup', toolData: 'Dati', toolDataList: 'PostgreSQL · MySQL · Redis · Validazione · Mappatura dei dati',
+    toolExpanding: 'In evoluzione', toolBusiness: 'Business', toolBusinessList: 'Analisi dei requisiti · Architettura · E-commerce · Mentoring · Responsabilità end to end',
+    contactEyebrow: '06 / Contatti', contactTitle: 'Hai un sistema complesso da integrare?', copyEmail: 'Copia l’e-mail',
+    viewCv: 'Vedi il CV (PL)',
+    footerText: 'Costruito per essere chiaro, affidabile e funzionare bene sul web.', backTop: 'Torna in alto', emailCopied: 'Indirizzo e-mail copiato',
+    openMenu: 'Apri il menu', closeMenu: 'Chiudi il menu', languageLabel: 'Selezione della lingua'
   }
 };
 
 const menuButton = document.querySelector('#menuButton');
 const mobileMenu = document.querySelector('#mobileMenu');
-const languageToggle = document.querySelector('#languageToggle');
+const languageOptions = [...document.querySelectorAll('[data-language]')];
 const copyButton = document.querySelector('#copyEmail');
 const toast = document.querySelector('#toast');
-let currentLanguage = localStorage.getItem('portfolio-language') || (navigator.language.toLowerCase().startsWith('pl') ? 'pl' : 'en');
+const supportedLanguages = Object.keys(translations);
+let storedLanguage = null;
+try {
+  storedLanguage = localStorage.getItem('portfolio-language');
+} catch {
+  storedLanguage = null;
+}
+const browserLanguage = (navigator.languages || [navigator.language])
+  .map((value) => value.toLowerCase().split('-')[0])
+  .find((value) => supportedLanguages.includes(value)) || 'en';
+let currentLanguage = supportedLanguages.includes(storedLanguage) ? storedLanguage : (supportedLanguages.includes(browserLanguage) ? browserLanguage : 'en');
 
 function applyLanguage(language) {
-  const copy = translations[language] || translations.en;
-  currentLanguage = language;
-  document.documentElement.lang = language;
+  currentLanguage = translations[language] ? language : 'en';
+  const copy = translations[currentLanguage];
+  document.documentElement.lang = currentLanguage;
   document.title = copy.metaTitle;
   document.querySelector('meta[name="description"]').content = copy.metaDescription;
   document.querySelector('meta[property="og:title"]').content = copy.metaTitle;
@@ -146,16 +210,17 @@ function applyLanguage(language) {
     if (value !== undefined) element.setAttribute('aria-label', value);
   });
 
-  languageToggle.querySelector('.language-current').textContent = language.toUpperCase();
-  languageToggle.querySelector('.language-next').textContent = language === 'en' ? 'PL' : 'EN';
-  languageToggle.setAttribute('aria-label', copy.switchLanguage);
-  languageToggle.title = copy.switchLanguage;
+  languageOptions.forEach((option) => option.setAttribute('aria-pressed', String(option.dataset.language === currentLanguage)));
   const menuOpen = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-label', menuOpen ? copy.closeMenu : copy.openMenu);
-  localStorage.setItem('portfolio-language', language);
+  try {
+    localStorage.setItem('portfolio-language', currentLanguage);
+  } catch {
+    // Keep the selected language for this page even when browser storage is unavailable.
+  }
 }
 
-languageToggle?.addEventListener('click', () => applyLanguage(currentLanguage === 'en' ? 'pl' : 'en'));
+languageOptions.forEach((option) => option.addEventListener('click', () => applyLanguage(option.dataset.language)));
 
 function closeMenu(returnFocus = false) {
   mobileMenu.classList.add('hidden');

@@ -23,7 +23,7 @@ const translations = {
     process3Title: 'Explore your options', process3Text: 'I ask questions, check assumptions, and share relevant experience when it helps.', process4Title: 'Choose your next step', process4Text: 'You decide what to do next and leave able to explain why.',
     contactEyebrow: '04 / Mentoring', contactTitle: 'What are you trying to achieve?', contactText: 'If you are working through a technical project and feel stuck, send me your goal, what you have already tried, and the question you cannot answer yet. If my experience is relevant, we can talk.', startConversation: 'Ask about mentoring',
     advisoryAlt: 'Dmytro Kolida reflecting over coffee', footerText: 'Good questions. Learning by doing.', backPortfolio: 'Back to portfolio',
-    openMenu: 'Open menu', closeMenu: 'Close menu', switchLanguage: 'Switch to Polish'
+    openMenu: 'Open menu', closeMenu: 'Close menu', languageLabel: 'Language selection', mentoringMailto: 'mailto:dmytrokolida@gmail.com?subject=Technical%20mentoring'
   },
   pl: {
     metaTitle: 'Mentoring techniczny | Dmytro Kolida',
@@ -49,19 +49,55 @@ const translations = {
     process3Title: 'Sprawdź możliwości', process3Text: 'Zadaję pytania, sprawdzam założenia i dzielę się odpowiednim doświadczeniem, gdy jest to pomocne.', process4Title: 'Wybierz kolejny krok', process4Text: 'To Ty decydujesz, co zrobisz dalej, i potrafisz wyjaśnić dlaczego.',
     contactEyebrow: '04 / Mentoring', contactTitle: 'Co chcesz osiągnąć?', contactText: 'Jeśli pracujesz nad projektem technicznym i utknąłeś, napisz, jaki masz cel, czego już próbowałeś i na jakie pytanie wciąż nie znasz odpowiedzi. Jeśli moje doświadczenie okaże się pomocne, porozmawiamy.', startConversation: 'Zapytaj o mentoring',
     advisoryAlt: 'Dmytro Kolida podczas chwili refleksji przy kawie', footerText: 'Dobre pytania. Nauka przez działanie.', backPortfolio: 'Wróć do portfolio',
-    openMenu: 'Otwórz menu', closeMenu: 'Zamknij menu', switchLanguage: 'Przełącz na język angielski'
+    openMenu: 'Otwórz menu', closeMenu: 'Zamknij menu', languageLabel: 'Wybór języka', mentoringMailto: 'mailto:dmytrokolida@gmail.com?subject=Mentoring%20techniczny'
+  },
+  it: {
+    metaTitle: 'Mentoring tecnico | Dmytro Kolida',
+    metaDescription: 'Mentoring tecnico basato sull’esperienza maturata come Space Eagle durante la Piscine intensiva di quattro settimane di 42 Warsaw e come mentor a HackYeah 2026.',
+    ogDescription: 'Porta un obiettivo o un ostacolo. Ti aiuterò ad analizzarlo con domande mirate, contesto pratico e feedback sincero.',
+    skip: 'Vai al contenuto', navLabel: 'Navigazione principale', homeLabel: 'Dmytro Kolida, pagina iniziale', navWork: 'Progetti selezionati', navAbout: 'Chi sono', navMentoring: 'Mentoring', navContact: 'Contatti',
+    heroEyebrow: 'Mentoring tecnico', heroTitle: 'Le domande giuste aiutano a prendere decisioni autonome e consapevoli.',
+    heroText: 'Come Space Eagle a 42 Warsaw, ho affiancato i nuovi partecipanti durante la Piscine di quattro settimane, un percorso intensivo in presenza basato sull’apprendimento tra pari e sui progetti. Li ho aiutati a orientarsi nel programma, ragionare sui problemi e individuare in autonomia i passi successivi, contribuendo anche all’organizzazione delle attività formative. Applico lo stesso approccio, fondato sulle domande, nel mentoring a HackYeah 2026.',
+    describeProblem: 'Raccontami il tuo obiettivo', viewWork: 'Scopri i progetti di ingegneria',
+    heroAlt: 'Dmytro Kolida spiega del codice accanto a un portatile mentre il suo cane ascolta', photoCaption: 'Spiego il codice al mio allievo più paziente. Un buon mentoring inizia dall’ascolto e da una domanda utile.',
+    experienceLabel: 'Esperienza nel mentoring', metric1Title: 'Space Eagle', metric1Text: 'Piscine di 42 Warsaw', metric2Title: 'HackYeah 2026', metric2Text: 'Mentoring durante l’hackathon', metric3Title: 'Progetti reali', metric3Text: 'Imparare facendo', metric4Title: 'Domande utili', metric4Text: 'Decisioni autonome',
+    offerEyebrow: '01 / Il mio approccio al mentoring', offerTitle: 'Un mentoring che sviluppa l’autonomia.', offerIntro: 'Lavoriamo su un obiettivo o un ostacolo reale. Metto a disposizione domande, metodo ed esperienza pertinente, non una risposta preconfezionata.',
+    offer1Title: 'Chiarire l’obiettivo', offer1Text: 'Definiamo ciò che vuoi davvero ottenere, ciò che sappiamo già e quali ipotesi devono essere verificate.',
+    offer1Result: 'Un obiettivo chiaro e un problema circoscritto su cui puoi lavorare.',
+    offer2Title: 'Ragionare sul problema', offer2Text: '<span class="comparison-part"><strong>Prima:</strong> il problema sembra troppo grande o poco chiaro per sapere da dove iniziare.</span><span class="comparison-part"><strong>Dopo:</strong> sai definire l’ostacolo, confrontare le opzioni e scegliere cosa verificare come passo successivo.</span>',
+    offer2Result: 'Un metodo di ragionamento che comprendi e sai applicare in autonomia.',
+    offer3Title: 'Trasformare le idee in azione', offer3Text: 'Trasformiamo ciò che hai imparato in un passo successivo realistico. Quando entrano in gioco strumenti o l’IA, resti tu a decidere e verifichi personalmente le azioni sensibili.',
+    offer3Result: 'Un passo successivo scelto da te, di cui sai spiegare le motivazioni e le verifiche.', youLeaveWith: 'Risultato',
+    audienceEyebrow: '02 / A chi è rivolto il mentoring', audienceTitle: 'Per chi cerca una guida senza rinunciare a decidere in autonomia.',
+    audience1: 'Studenti di 42 Warsaw, partecipanti alla Piscine e chi studia in autonomia mentre affronta un progetto difficile.', audience2: 'Partecipanti agli hackathon che hanno bisogno di chiarire l’obiettivo, suddividere il lavoro o prendere una decisione sotto pressione.', audience3: 'Ingegneri all’inizio della carriera che vogliono rafforzare il proprio metodo di risoluzione dei problemi invece di copiare una risposta.',
+    processEyebrow: '03 / Come funziona il mentoring', processTitle: 'Il tuo obiettivo resta al centro.', processIntro: 'Partiamo dal tuo obiettivo e dal contesto che puoi condividere in sicurezza. Guido la conversazione con domande, metodo ed esempi pratici.',
+    process1Title: 'Porta il tuo obiettivo', process1Text: 'Raccontami cosa vuoi ottenere, cosa hai già provato e dove ti senti bloccato.', process2Title: 'Rendi il problema più chiaro', process2Text: 'Separiamo i fatti dalle ipotesi e suddividiamo la sfida in parti più piccole.',
+    process3Title: 'Esplora le opzioni', process3Text: 'Faccio domande, verifico le ipotesi e condivido esperienze pertinenti quando possono essere utili.', process4Title: 'Scegli il prossimo passo', process4Text: 'Decidi tu cosa fare dopo e, alla fine, sai spiegare perché hai scelto quella direzione.',
+    contactEyebrow: '04 / Mentoring', contactTitle: 'Che cosa vuoi ottenere?', contactText: 'Se stai lavorando a un progetto tecnico e ti senti bloccato, scrivimi indicando il tuo obiettivo, ciò che hai già provato e la domanda a cui non hai ancora trovato risposta. Se la mia esperienza può esserti utile, possiamo parlarne.', startConversation: 'Parliamo di mentoring',
+    advisoryAlt: 'Dmytro Kolida riflette davanti a una tazza di caffè', footerText: 'Domande giuste. Imparare facendo.', backPortfolio: 'Torna al portfolio',
+    openMenu: 'Apri il menu', closeMenu: 'Chiudi il menu', languageLabel: 'Selezione della lingua', mentoringMailto: 'mailto:dmytrokolida@gmail.com?subject=Mentoring%20tecnico'
   }
 };
 
 const menuButton = document.querySelector('#menuButton');
 const mobileMenu = document.querySelector('#mobileMenu');
-const languageToggle = document.querySelector('#languageToggle');
-let currentLanguage = localStorage.getItem('portfolio-language') || (navigator.language.toLowerCase().startsWith('pl') ? 'pl' : 'en');
+const languageOptions = [...document.querySelectorAll('[data-language]')];
+const supportedLanguages = Object.keys(translations);
+let storedLanguage = null;
+try {
+  storedLanguage = localStorage.getItem('portfolio-language');
+} catch {
+  storedLanguage = null;
+}
+const browserLanguage = (navigator.languages || [navigator.language])
+  .map((value) => value.toLowerCase().split('-')[0])
+  .find((value) => supportedLanguages.includes(value)) || 'en';
+let currentLanguage = supportedLanguages.includes(storedLanguage) ? storedLanguage : (supportedLanguages.includes(browserLanguage) ? browserLanguage : 'en');
 
 function applyLanguage(language) {
-  const copy = translations[language] || translations.en;
-  currentLanguage = language;
-  document.documentElement.lang = language;
+  currentLanguage = translations[language] ? language : 'en';
+  const copy = translations[currentLanguage];
+  document.documentElement.lang = currentLanguage;
   document.title = copy.metaTitle;
   document.querySelector('meta[name="description"]').content = copy.metaDescription;
   document.querySelector('meta[property="og:title"]').content = copy.metaTitle;
@@ -83,13 +119,18 @@ function applyLanguage(language) {
     const value = copy[element.dataset.i18nAria];
     if (value !== undefined) element.setAttribute('aria-label', value);
   });
+  document.querySelectorAll('[data-i18n-href]').forEach((element) => {
+    const value = copy[element.dataset.i18nHref];
+    if (value !== undefined) element.href = value;
+  });
 
-  languageToggle.querySelector('.language-current').textContent = language.toUpperCase();
-  languageToggle.querySelector('.language-next').textContent = language === 'en' ? 'PL' : 'EN';
-  languageToggle.setAttribute('aria-label', copy.switchLanguage);
-  languageToggle.title = copy.switchLanguage;
+  languageOptions.forEach((option) => option.setAttribute('aria-pressed', String(option.dataset.language === currentLanguage)));
   menuButton.setAttribute('aria-label', menuButton.getAttribute('aria-expanded') === 'true' ? copy.closeMenu : copy.openMenu);
-  localStorage.setItem('portfolio-language', language);
+  try {
+    localStorage.setItem('portfolio-language', currentLanguage);
+  } catch {
+    // Keep the selected language for this page even when browser storage is unavailable.
+  }
 }
 
 function closeMenu(returnFocus = false) {
@@ -99,7 +140,7 @@ function closeMenu(returnFocus = false) {
   if (returnFocus) menuButton.focus();
 }
 
-languageToggle.addEventListener('click', () => applyLanguage(currentLanguage === 'en' ? 'pl' : 'en'));
+languageOptions.forEach((option) => option.addEventListener('click', () => applyLanguage(option.dataset.language)));
 
 menuButton.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';

@@ -11,9 +11,12 @@ h1, h2, h3 { word-spacing: .11em; }
 .nav-link::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -.4rem; height: 1px; background: #d59a6a; transition: right .25s ease; }
 .nav-link:hover { color: #f1eee8; }
 .nav-link:hover::after { right: 0; }
-.language-toggle { display: inline-flex; align-items: center; gap: .3rem; min-height: 2.5rem; border: 1px solid rgba(255,255,255,.15); border-radius: 999px; padding: 0 .75rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .67rem; font-weight: 700; letter-spacing: .08em; transition: border-color .2s ease, color .2s ease, background .2s ease; }
-.language-toggle:hover { border-color: rgba(213,154,106,.55); color: #d59a6a; background: rgba(255,255,255,.04); }
-.language-next { color: #8a94a5; }
+.language-toggle { display: inline-flex; align-items: center; gap: .12rem; min-height: 2.5rem; border: 1px solid rgba(255,255,255,.15); border-radius: 999px; padding: 0 .4rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .67rem; font-weight: 700; letter-spacing: .08em; transition: border-color .2s ease, background .2s ease; }
+.language-toggle:hover, .language-toggle:focus-within { border-color: rgba(213,154,106,.55); background: rgba(255,255,255,.04); }
+.language-option { min-width: 1.75rem; border-radius: 999px; padding: .35rem .2rem; color: #8a94a5; font: inherit; transition: color .2s ease, background .2s ease; }
+.language-option:hover { color: #d59a6a; }
+.language-option[aria-pressed="true"] { background: #d59a6a; color: #0b0e13; }
+.language-option:focus-visible { outline: 2px solid #d59a6a; outline-offset: 2px; }
 .language-separator { color: #b4bac5; }
 .button-primary, .button-secondary, .placeholder-button { display: inline-flex; min-height: 3.25rem; align-items: center; justify-content: center; gap: .7rem; border-radius: 999px; padding: 0 1.25rem; font-size: .875rem; font-weight: 700; transition: transform .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease; }
 .button-primary { background: #d59a6a; color: #0b0e13; }
