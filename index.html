@@ -7,27 +7,31 @@
   <meta name="theme-color" content="#0b0e13">
   <meta property="og:title" content="Dmytro Kolida — Solutions &amp; Integration Engineer">
   <meta property="og:description" content="I connect business software, data, and external services so everyday work becomes faster, safer, and less manual.">
-  <meta property="og:image" content="assets/dmytro-kolida.jpg">
+  <meta property="og:image" content="https://dymirt.github.io/assets/dmytro-home-og.jpg">
+  <meta property="og:url" content="https://dymirt.github.io/">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <title>Dmytro Kolida — Solutions &amp; Integration Engineer</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="tailwind.css?v=20260713-2">
-  <link rel="stylesheet" href="styles.css?v=20260715-3">
+  <script>document.documentElement.classList.add('js'); setTimeout(() => { if (!document.documentElement.classList.contains('app-ready')) document.documentElement.classList.remove('js'); }, 2000);</script>
+  <link rel="stylesheet" href="tailwind.css?v=20260719-1">
+  <link rel="stylesheet" href="styles.css?v=20260719-1">
 </head>
 <body class="bg-ink text-paper antialiased selection:bg-acid selection:text-ink">
   <a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
 
   <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/85 backdrop-blur-xl">
-    <nav class="mx-auto flex h-20 max-w-page items-center justify-between px-5 sm:px-8 lg:px-12" aria-label="Main navigation">
-      <a href="#top" class="group flex items-center gap-3" aria-label="Dmytro Kolida, home">
+    <nav class="mx-auto flex h-20 max-w-page items-center justify-between px-5 sm:px-8 lg:px-12" aria-label="Main navigation" data-i18n-aria="navLabel">
+      <a href="#top" class="group flex items-center gap-3" aria-label="Dmytro Kolida, home" data-i18n-aria="homeLabel">
         <span class="grid h-9 w-9 place-items-center rounded-full bg-acid font-mono text-xs font-bold text-ink transition-transform group-hover:rotate-12">DK</span>
         <span class="hidden text-sm font-semibold tracking-tight sm:block">Dmytro Kolida</span>
       </a>
 
-      <div class="hidden items-center gap-8 text-sm text-fog md:flex">
+      <div class="hidden items-center gap-7 text-sm text-fog lg:flex">
         <a class="nav-link" href="#expertise" data-i18n="navExpertise">Expertise</a>
         <a class="nav-link" href="#work" data-i18n="navWork">Selected work</a>
         <a class="nav-link" href="#about" data-i18n="navAbout">About</a>
+        <a class="nav-link" href="mentoring/" data-i18n="navMentoring">Mentoring</a>
         <a class="nav-link" href="#contact" data-i18n="navContact">Contact</a>
       </div>
 
@@ -38,41 +42,28 @@
         <span class="hidden items-center gap-2 rounded-full border border-white/10 px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-fog lg:flex">
           <span class="h-2 w-2 animate-pulse rounded-full bg-acid"></span> <span data-i18n="availability">Open to opportunities</span>
         </span>
-        <button id="menuButton" class="grid h-10 w-10 place-items-center rounded-full border border-white/15 md:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <button id="menuButton" class="grid h-10 w-10 place-items-center rounded-full border border-white/15 lg:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </nav>
-    <div id="mobileMenu" class="hidden border-t border-white/10 bg-ink px-5 py-5 md:hidden">
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-ink px-5 py-5 lg:hidden">
       <div class="flex flex-col gap-4 text-lg">
-        <a href="#expertise" data-i18n="navExpertise">Expertise</a><a href="#work" data-i18n="navWork">Selected work</a><a href="#about" data-i18n="navAbout">About</a><a href="#contact" data-i18n="navContact">Contact</a>
+        <a href="#expertise" data-i18n="navExpertise">Expertise</a><a href="#work" data-i18n="navWork">Selected work</a><a href="#about" data-i18n="navAbout">About</a><a href="mentoring/" data-i18n="navMentoring">Mentoring</a><a href="#contact" data-i18n="navContact">Contact</a>
       </div>
     </div>
   </header>
 
   <main id="main">
-    <section id="top" class="relative min-h-screen overflow-hidden pt-20">
+    <section id="top" class="relative overflow-hidden pt-20">
       <div class="grid-overlay absolute inset-0 opacity-30"></div>
       <div class="glow absolute -right-32 top-20 h-[38rem] w-[38rem] rounded-full"></div>
-      <div class="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-page items-center gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[.68fr_1.32fr] lg:px-12 lg:py-20">
-        <aside class="reveal relative mx-auto w-full max-w-md lg:mx-0" style="--delay: 80ms">
-          <div class="portrait-frame relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-2">
-            <img src="assets/dmytro-kolida.jpg" alt="Portrait of Dmytro Kolida" data-i18n-alt="portraitAlt" width="460" height="460" class="aspect-square w-full rounded-[1.55rem] object-cover">
-            <div class="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/15 bg-ink/90 p-4 text-paper backdrop-blur-lg">
-              <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-white/60" data-i18n="location">Based near Warsaw, Poland</p>
-              <p class="mt-1 text-sm font-medium" data-i18n="context">Engineering + operations + business context</p>
-            </div>
-          </div>
-          <div class="absolute -right-5 -top-6 hidden rounded-2xl border border-acid/25 bg-ink px-4 py-3 font-mono text-[11px] text-acid shadow-xl sm:block">
-            <span data-i18n="ownership">OWNERSHIP: END → END</span>
-          </div>
-        </aside>
-
-        <div class="reveal lg:pl-8" style="--delay: 160ms">
+      <div class="hero-layout">
+        <div class="hero-copy reveal" style="--delay: 80ms">
           <p class="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-mint">
             <span class="h-px w-10 bg-mint"></span> <span data-i18n="role">Solutions &amp; Integration Engineer</span>
           </p>
-          <h1 class="max-w-5xl text-[clamp(3.5rem,7.4vw,8rem)] font-semibold leading-[0.86] tracking-[-0.075em]">
+          <h1 class="hero-heading max-w-5xl font-semibold">
             <span data-i18n-html="heroTitle">Systems that<br><span class="text-acid">work in reality.</span></span>
           </h1>
           <p class="mt-8 max-w-2xl text-lg leading-relaxed text-fog sm:text-xl">
@@ -83,6 +74,17 @@
             <a href="mailto:dmytrokolida@gmail.com" class="button-secondary" data-i18n="startConversation">Start a conversation</a>
           </div>
         </div>
+
+        <aside class="hero-visual reveal" style="--delay: 160ms">
+          <div class="hero-portrait">
+            <img src="assets/dmytro-engineer-720.webp" srcset="assets/dmytro-engineer-720.webp 720w, assets/dmytro-engineer-1200.webp 1200w" sizes="(min-width: 1024px) 38vw, 90vw" alt="Dmytro Kolida in a grey suit against a dark studio background" data-i18n-alt="portraitAlt" width="1200" height="1798" fetchpriority="high" decoding="async">
+            <div class="hero-portrait-card">
+              <p data-i18n="location">Based near Warsaw, Poland</p>
+              <strong data-i18n="context">Engineering + operations + business context</strong>
+            </div>
+          </div>
+          <div class="ownership-note"><span data-i18n="ownership">OWNERSHIP: END → END</span></div>
+        </aside>
       </div>
     </section>
 
@@ -235,11 +237,26 @@
       </div>
     </section>
 
+    <section id="mentoring" class="section-shell border-t border-white/10">
+      <div class="mentoring-callout">
+        <div class="mentoring-callout-copy reveal">
+          <p class="eyebrow" data-i18n="mentoringEyebrow">04 / Mentoring &amp; advisory</p>
+          <h2 data-i18n="mentoringTitle">Complex systems, explained clearly.</h2>
+          <p data-i18n="mentoringText">Focused working sessions for engineers, founders, and small teams who need to map dependencies, compare trade-offs, and choose a safe next step.</p>
+          <a class="button-primary" href="mentoring/"><span data-i18n="mentoringCta">See how I can help</span> <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="mentoring-callout-visual reveal" style="--delay: 120ms">
+          <img src="assets/dmytro-mentoring-720.webp" srcset="assets/dmytro-mentoring-720.webp 720w, assets/dmytro-mentoring-1200.webp 1200w" sizes="(min-width: 1024px) 46vw, 92vw" alt="Dmytro explaining code beside a laptop while his dog listens" data-i18n-alt="mentoringAlt" width="1200" height="1798" loading="lazy" decoding="async">
+          <figcaption data-i18n="mentoringCaption">Explaining code to my most honest reviewer.</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="toolkit-section border-y border-white/10 text-paper">
       <div class="mx-auto max-w-page px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div class="reveal grid gap-10 lg:grid-cols-[.75fr_1.25fr]">
           <div>
-            <p class="font-mono text-xs font-bold uppercase tracking-[0.2em]" data-i18n="toolkitEyebrow">04 / Toolkit</p>
+            <p class="font-mono text-xs font-bold uppercase tracking-[0.2em]" data-i18n="toolkitEyebrow">05 / Toolkit</p>
             <h2 class="mt-5 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl" data-i18n="toolkitTitle">Tools I use to build, connect, and run systems.</h2>
           </div>
           <div class="tool-grid">
@@ -257,7 +274,7 @@
     <section id="contact" class="relative overflow-hidden px-5 py-24 sm:px-8 lg:px-12 lg:py-36">
       <div class="glow absolute -left-52 bottom-0 h-[35rem] w-[35rem] rounded-full opacity-60"></div>
       <div class="relative mx-auto max-w-page reveal">
-        <p class="eyebrow" data-i18n="contactEyebrow">05 / Contact</p>
+        <p class="eyebrow" data-i18n="contactEyebrow">06 / Contact</p>
         <h2 class="mt-7 max-w-5xl text-[clamp(3.4rem,8vw,8rem)] font-semibold leading-[0.88] tracking-[-0.07em]" data-i18n="contactTitle">Have a difficult system to connect?</h2>
         <div class="mt-10 flex flex-wrap items-center gap-4">
           <a class="button-primary" href="mailto:dmytrokolida@gmail.com">dmytrokolida@gmail.com <span>↗</span></a>
@@ -277,6 +294,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite" data-i18n="emailCopied">Email copied</div>
-  <script src="script.js?v=20260715-4"></script>
+  <script src="script.js?v=20260719-1"></script>
 </body>
 </html>

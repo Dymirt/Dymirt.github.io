@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Focused technical sessions for system integrations, legacy modernization, production problems, and AI-assisted workflows with human approval.">
+  <meta name="theme-color" content="#0b0e13">
+  <meta property="og:title" content="Technical Mentoring &amp; Advisory — Dmytro Kolida">
+  <meta property="og:description" content="Understand the dependencies, compare the trade-offs, and leave with a safe next step.">
+  <meta property="og:image" content="https://dymirt.github.io/assets/dmytro-mentoring-og.jpg">
+  <meta property="og:url" content="https://dymirt.github.io/mentoring/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Technical Mentoring &amp; Advisory — Dmytro Kolida</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add('js'); setTimeout(() => { if (!document.documentElement.classList.contains('app-ready')) document.documentElement.classList.remove('js'); }, 2000);</script>
+  <link rel="stylesheet" href="../tailwind.css?v=20260719-1">
+  <link rel="stylesheet" href="../styles.css?v=20260719-1">
+</head>
+<body class="mentor-page bg-ink text-paper antialiased selection:bg-acid selection:text-ink">
+  <a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
+
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/85 backdrop-blur-xl">
+    <nav class="mx-auto flex h-20 max-w-page items-center justify-between px-5 sm:px-8 lg:px-12" aria-label="Main navigation" data-i18n-aria="navLabel">
+      <a href="../" class="group flex items-center gap-3" aria-label="Dmytro Kolida, home" data-i18n-aria="homeLabel">
+        <span class="grid h-9 w-9 place-items-center rounded-full bg-acid font-mono text-xs font-bold text-ink transition-transform group-hover:rotate-12">DK</span>
+        <span class="hidden text-sm font-semibold tracking-tight sm:block">Dmytro Kolida</span>
+      </a>
+
+      <div class="hidden items-center gap-7 text-sm text-fog lg:flex">
+        <a class="nav-link" href="../#work" data-i18n="navWork">Selected work</a>
+        <a class="nav-link" href="../#about" data-i18n="navAbout">About</a>
+        <a class="nav-link text-paper" href="./" aria-current="page" data-i18n="navMentoring">Mentoring</a>
+        <a class="nav-link" href="#contact" data-i18n="navContact">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button id="languageToggle" class="language-toggle" type="button" aria-label="Switch to Polish" title="Switch to Polish">
+          <span class="language-current">EN</span><span class="language-separator">/</span><span class="language-next">PL</span>
+        </button>
+        <button id="menuButton" class="grid h-10 w-10 place-items-center rounded-full border border-white/15 lg:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-ink px-5 py-5 lg:hidden">
+      <div class="flex flex-col gap-4 text-lg">
+        <a href="../#work" data-i18n="navWork">Selected work</a>
+        <a href="../#about" data-i18n="navAbout">About</a>
+        <a href="./" aria-current="page" data-i18n="navMentoring">Mentoring</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="mentor-hero">
+      <div class="grid-overlay absolute inset-0 opacity-30"></div>
+      <div class="glow absolute -right-32 top-20 h-[38rem] w-[38rem] rounded-full"></div>
+      <div class="mentor-hero-grid">
+        <div class="mentor-hero-copy reveal">
+          <p class="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-mint">
+            <span class="h-px w-10 bg-mint"></span> <span data-i18n="heroEyebrow">Technical mentoring &amp; advisory</span>
+          </p>
+          <h1 data-i18n="heroTitle">Understand the system. Then change it with confidence.</h1>
+          <p data-i18n="heroText">I offer focused technical sessions built around a real system or decision. Together, we establish what depends on what, where the risk is, and what should happen next.</p>
+          <div class="mentor-hero-actions">
+            <a class="button-primary" href="mailto:dmytrokolida@gmail.com?subject=Technical%20mentoring%20or%20advisory"><span data-i18n="describeProblem">Describe the problem</span> <span aria-hidden="true">↗</span></a>
+            <a class="button-secondary" href="../#work" data-i18n="viewWork">View engineering work</a>
+          </div>
+        </div>
+
+        <figure class="mentor-hero-visual reveal" style="--delay: 120ms">
+          <img src="../assets/dmytro-mentoring-720.webp" srcset="../assets/dmytro-mentoring-720.webp 720w, ../assets/dmytro-mentoring-1200.webp 1200w" sizes="(min-width: 1024px) 40vw, 92vw" alt="Dmytro Kolida discusses code with a dog beside a laptop" data-i18n-alt="heroAlt" width="1200" height="1798" fetchpriority="high" decoding="async">
+          <figcaption class="mentor-photo-caption" data-i18n="photoCaption">Explaining code to my most honest reviewer. If the idea cannot be made clear, it is not ready to be built.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="border-y border-white/10 bg-white/[0.025]" aria-label="Areas of experience" data-i18n-aria="experienceLabel">
+      <div class="mx-auto grid max-w-page grid-cols-2 divide-x divide-white/10 px-5 sm:px-8 lg:grid-cols-4 lg:px-12">
+        <div class="metric reveal"><strong data-i18n="metric1Title">Integrations</strong><span data-i18n="metric1Text">Systems &amp; data flow</span></div>
+        <div class="metric reveal" style="--delay: 80ms"><strong data-i18n="metric2Title">Legacy systems</strong><span data-i18n="metric2Text">Safe, staged change</span></div>
+        <div class="metric reveal" style="--delay: 160ms"><strong data-i18n="metric3Title">Production</strong><span data-i18n="metric3Text">Failure &amp; operations</span></div>
+        <div class="metric reveal" style="--delay: 240ms"><strong data-i18n="metric4Title">9 years</strong><span data-i18n="metric4Text">Business ownership</span></div>
+      </div>
+    </section>
+
+    <section id="offers" class="mentor-section">
+      <div class="mentor-section-heading reveal">
+        <p class="eyebrow" data-i18n="offerEyebrow">01 / How I can help</p>
+        <h2 data-i18n="offerTitle">Practical help with the difficult part.</h2>
+        <p data-i18n="offerIntro">The session starts with the real system, decision, or failure—not a generic presentation.</p>
+      </div>
+
+      <div class="mentor-offer-grid">
+        <article class="mentor-card reveal">
+          <span class="mentor-card-number">01</span>
+          <h3 data-i18n="offer1Title">Integration review</h3>
+          <p data-i18n="offer1Text">We map how applications, databases, files, and external services exchange data: what starts the flow, where data changes, who owns each step, and what happens when one dependency fails.</p>
+          <div class="mentor-result"><span data-i18n="youLeaveWith">You leave with</span><strong data-i18n="offer1Result">A dependency map, clear responsibilities, and a practical integration plan.</strong></div>
+        </article>
+
+        <article class="mentor-card reveal" style="--delay: 100ms">
+          <span class="mentor-card-number">02</span>
+          <h3 data-i18n="offer2Title">Legacy modernization plan</h3>
+          <p data-i18n-html="offer2Text"><strong>Before:</strong> every change feels risky and a full rewrite looks like the only option. <strong>After:</strong> we identify the smallest safe improvements, the tests required before release, and a way back if something fails.</p>
+          <div class="mentor-result"><span data-i18n="youLeaveWith">You leave with</span><strong data-i18n="offer2Result">What to change first, what to leave alone, and how to verify the result.</strong></div>
+        </article>
+
+        <article class="mentor-card reveal" style="--delay: 200ms">
+          <span class="mentor-card-number">03</span>
+          <h3 data-i18n="offer3Title">Engineering problem-solving</h3>
+          <p data-i18n="offer3Text">Bring a concrete design, debugging, automation, or production problem. We compare realistic options, failure paths, and operational consequences. Sensitive AI-assisted actions remain subject to human review and approval.</p>
+          <div class="mentor-result"><span data-i18n="youLeaveWith">You leave with</span><strong data-i18n="offer3Result">A decision you understand—not instructions you must trust blindly.</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="mentor-audience">
+      <div class="mentor-audience-grid">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="audienceEyebrow">02 / Who it is for</p>
+          <h2 class="mt-5" data-i18n="audienceTitle">For people who own the result, not just the ticket.</h2>
+        </div>
+        <div class="reveal" style="--delay: 120ms">
+          <ul class="mentor-list">
+            <li data-i18n="audience1">Engineers facing an unfamiliar integration, legacy, or production problem.</li>
+            <li data-i18n="audience2">Technical founders and product owners whose tools and data no longer fit the business process.</li>
+            <li data-i18n="audience3">Small teams that need an independent second opinion before a costly or risky change.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mentor-section">
+      <div class="mentor-section-heading reveal">
+        <p class="eyebrow" data-i18n="processEyebrow">03 / Working process</p>
+        <h2 data-i18n="processTitle">One real problem. One useful outcome.</h2>
+        <p data-i18n="processIntro">Only share material you can safely disclose. The goal is a decision and a written next step, not more abstraction.</p>
+      </div>
+      <div class="mentor-process-grid reveal">
+        <article class="mentor-process-step"><span>01</span><h3 data-i18n="process1Title">Bring the real problem</h3><p data-i18n="process1Text">A short description, safe code excerpt, sample data, diagram, or relevant logs.</p></article>
+        <article class="mentor-process-step"><span>02</span><h3 data-i18n="process2Title">Map dependencies</h3><p data-i18n="process2Text">Follow the flow from input to outcome and name every important owner and failure point.</p></article>
+        <article class="mentor-process-step"><span>03</span><h3 data-i18n="process3Title">Compare trade-offs</h3><p data-i18n="process3Text">Check assumptions and compare options by risk, effort, maintainability, and operations.</p></article>
+        <article class="mentor-process-step"><span>04</span><h3 data-i18n="process4Title">Leave with next steps</h3><p data-i18n="process4Text">Receive a concise summary with decisions, risks, priorities, and a release or rollback checklist.</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="mentor-section border-t border-white/10">
+      <div class="advisory-cta">
+        <div class="advisory-cta-copy reveal">
+          <p class="eyebrow" data-i18n="contactEyebrow">04 / Start a conversation</p>
+          <h2 data-i18n="contactTitle">Bring the difficult part.</h2>
+          <p data-i18n="contactText">Have a system that is hard to connect, change, or explain? Send me the context. I will tell you whether a focused working session is the right next step.</p>
+          <a class="button-primary" href="mailto:dmytrokolida@gmail.com?subject=Technical%20mentoring%20or%20advisory"><span data-i18n="startConversation">Start a conversation</span> <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="advisory-cta-photo reveal" style="--delay: 120ms">
+          <img src="../assets/dmytro-advisory-960.webp" alt="Dmytro Kolida thinking through a technical problem over coffee" data-i18n-alt="advisoryAlt" width="960" height="1439" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="mx-auto flex max-w-page flex-col gap-3 px-5 py-8 text-xs text-fog sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
+      <p>© <span id="year"></span> Dmytro Kolida. <span data-i18n="footerText">Clear systems. Deliberate decisions.</span></p>
+      <a href="../" class="font-mono uppercase tracking-wider hover:text-acid"><span data-i18n="backPortfolio">Back to portfolio</span> ↖</a>
+    </div>
+  </footer>
+
+  <script src="mentoring.js?v=20260719-1"></script>
+</body>
+</html>

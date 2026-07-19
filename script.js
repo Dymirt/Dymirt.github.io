@@ -3,8 +3,8 @@ const translations = {
     metaTitle: 'Dmytro Kolida — Solutions & Integration Engineer',
     metaDescription: 'Dmytro Kolida — Solutions & Integration Engineer. I connect business software, data, and external services, modernize legacy systems, and keep them running.',
     ogDescription: 'I connect business software, data, and external services so everyday work becomes faster, safer, and less manual.',
-    skip: 'Skip to content', navExpertise: 'Expertise', navWork: 'Selected work', navAbout: 'About', navContact: 'Contact',
-    availability: 'Open to opportunities', portraitAlt: 'Portrait of Dmytro Kolida', location: 'Based near Warsaw, Poland',
+    skip: 'Skip to content', navLabel: 'Main navigation', homeLabel: 'Dmytro Kolida, home', navExpertise: 'Expertise', navWork: 'Selected work', navAbout: 'About', navMentoring: 'Mentoring', navContact: 'Contact',
+    availability: 'Open to opportunities', portraitAlt: 'Dmytro Kolida in a grey suit against a dark studio background', location: 'Based near Warsaw, Poland',
     context: 'Engineering + operations + business context', ownership: 'OWNERSHIP: END → END', role: 'Solutions & Integration Engineer',
     heroTitle: 'Systems that<br><span class="text-acid">work in reality.</span>',
     heroDescription: 'I connect business software, data, and external services so everyday work becomes faster, safer, and less manual — from the first problem description to deployment and support.',
@@ -43,10 +43,12 @@ const translations = {
     aboutText1: 'My engineering work covers Python and PHP applications, APIs, SQL, Linux, Docker, production problems, and legacy modernization. Nine years of running my own e-commerce business taught me to judge technology by whether it saves time, reduces risk, and works reliably — not by whether it is new.',
     aboutText2: 'I am most useful when the starting point is unclear, several systems must exchange data, and someone needs to take responsibility from the first discussion through production support.',
     howIWork: 'How I work', workProcess: 'Discover → design → deliver → operate', currentFocus: 'Current focus', focusText: 'Cloud integrations and AI-assisted work with human approval',
-    toolkitEyebrow: '04 / Toolkit', toolkitTitle: 'Tools I use to build, connect, and run systems.', toolBuild: 'Build', toolIntegrate: 'Integrate', toolOperate: 'Operate',
+    mentoringEyebrow: '04 / Mentoring & advisory', mentoringTitle: 'Complex systems, explained clearly.', mentoringText: 'Focused working sessions for engineers, founders, and small teams who need to map dependencies, compare trade-offs, and choose a safe next step.',
+    mentoringCta: 'See how I can help', mentoringAlt: 'Dmytro explaining code beside a laptop while his dog listens', mentoringCaption: 'Explaining code to my most honest reviewer.',
+    toolkitEyebrow: '05 / Toolkit', toolkitTitle: 'Tools I use to build, connect, and run systems.', toolBuild: 'Build', toolIntegrate: 'Integrate', toolOperate: 'Operate',
     toolOperateList: 'Linux · Docker · Proxmox · CI/CD · Logging · Backups', toolData: 'Data', toolDataList: 'PostgreSQL · MySQL · Redis · Validation · Data mapping',
     toolExpanding: 'Expanding', toolBusiness: 'Business', toolBusinessList: 'Discovery · Architecture · E-commerce · Mentoring · Ownership',
-    contactEyebrow: '05 / Contact', contactTitle: 'Have a difficult system to connect?', copyEmail: 'Copy email',
+    contactEyebrow: '06 / Contact', contactTitle: 'Have a difficult system to connect?', copyEmail: 'Copy email',
     viewCv: 'View CV (PL)',
     footerText: 'Built for clarity, reliability, and the web.', backTop: 'Back to top', emailCopied: 'Email copied',
     openMenu: 'Open menu', closeMenu: 'Close menu', switchLanguage: 'Switch to Polish'
@@ -55,8 +57,8 @@ const translations = {
     metaTitle: 'Dmytro Kolida — Inżynier rozwiązań i integracji',
     metaDescription: 'Dmytro Kolida — Inżynier rozwiązań i integracji. Łączę oprogramowanie biznesowe, dane i usługi zewnętrzne, modernizuję systemy legacy i dbam o ich działanie.',
     ogDescription: 'Łączę oprogramowanie biznesowe, dane i usługi zewnętrzne, aby codzienna praca była szybsza, bezpieczniejsza i wymagała mniej ręcznych działań.',
-    skip: 'Przejdź do treści', navExpertise: 'Kompetencje', navWork: 'Wybrane realizacje', navAbout: 'O mnie', navContact: 'Kontakt',
-    availability: 'Otwarty na nowe możliwości', portraitAlt: 'Portret Dmytra Kolidy', location: 'Okolice Warszawy, Polska',
+    skip: 'Przejdź do treści', navLabel: 'Główna nawigacja', homeLabel: 'Dmytro Kolida, strona główna', navExpertise: 'Kompetencje', navWork: 'Wybrane realizacje', navAbout: 'O mnie', navMentoring: 'Mentoring', navContact: 'Kontakt',
+    availability: 'Otwarty na nowe możliwości', portraitAlt: 'Dmytro Kolida w szarym garniturze na tle ciemnego studia', location: 'Okolice Warszawy, Polska',
     context: 'Inżynieria + operacje + kontekst biznesowy', ownership: 'ODPOWIEDZIALNOŚĆ: END TO END', role: 'Inżynier rozwiązań i integracji',
     heroTitle: 'Systemy, które<br><span class="text-acid">działają w praktyce.</span>',
     heroDescription: 'Łączę oprogramowanie biznesowe, dane i usługi zewnętrzne, aby codzienna praca była szybsza, bezpieczniejsza i wymagała mniej ręcznych działań — od opisu problemu po wdrożenie i wsparcie.',
@@ -95,10 +97,12 @@ const translations = {
     aboutText1: 'Moja praca obejmuje aplikacje Python i PHP, API, SQL, Linux, Docker, problemy produkcyjne i modernizację systemów legacy. Dziewięć lat prowadzenia własnego e-commerce nauczyło mnie oceniać technologię po tym, czy oszczędza czas, ogranicza ryzyko i działa niezawodnie — a nie po tym, czy jest nowa.',
     aboutText2: 'Najwięcej wnoszę, gdy punkt wyjścia jest niejasny, kilka systemów musi wymieniać dane, a ktoś powinien odpowiadać za całość od pierwszej rozmowy po wsparcie produkcji.',
     howIWork: 'Jak pracuję', workProcess: 'Analiza → projekt → wdrożenie → utrzymanie', currentFocus: 'Obecny kierunek', focusText: 'Integracje chmurowe i praca wspierana przez AI z akceptacją człowieka',
-    toolkitEyebrow: '04 / Narzędzia', toolkitTitle: 'Narzędzia, których używam do budowania, łączenia i utrzymania systemów.', toolBuild: 'Tworzenie', toolIntegrate: 'Integracje', toolOperate: 'Utrzymanie',
+    mentoringEyebrow: '04 / Mentoring i doradztwo', mentoringTitle: 'Złożone systemy wyjaśnione prostym językiem.', mentoringText: 'Skoncentrowane sesje robocze dla inżynierów, założycieli i małych zespołów, które potrzebują zmapować zależności, porównać kompromisy i wybrać bezpieczny kolejny krok.',
+    mentoringCta: 'Zobacz, jak mogę pomóc', mentoringAlt: 'Dmytro wyjaśnia kod przy laptopie, a jego pies uważnie słucha', mentoringCaption: 'Tłumaczę kod najbardziej szczeremu recenzentowi.',
+    toolkitEyebrow: '05 / Narzędzia', toolkitTitle: 'Narzędzia, których używam do budowania, łączenia i utrzymania systemów.', toolBuild: 'Tworzenie', toolIntegrate: 'Integracje', toolOperate: 'Utrzymanie',
     toolOperateList: 'Linux · Docker · Proxmox · CI/CD · Logi · Kopie zapasowe', toolData: 'Dane', toolDataList: 'PostgreSQL · MySQL · Redis · Walidacja · Mapowanie danych',
     toolExpanding: 'Rozwijam', toolBusiness: 'Biznes', toolBusinessList: 'Analiza potrzeb · Architektura · E-commerce · Mentoring · Odpowiedzialność',
-    contactEyebrow: '05 / Kontakt', contactTitle: 'Masz trudny system do zintegrowania?', copyEmail: 'Kopiuj e-mail',
+    contactEyebrow: '06 / Kontakt', contactTitle: 'Masz trudny system do zintegrowania?', copyEmail: 'Kopiuj e-mail',
     viewCv: 'Zobacz CV (PL)',
     footerText: 'Zbudowane z myślą o przejrzystości, niezawodności i sieci.', backTop: 'Wróć na górę', emailCopied: 'Adres e-mail skopiowany',
     openMenu: 'Otwórz menu', closeMenu: 'Zamknij menu', switchLanguage: 'Przełącz na język angielski'
@@ -137,6 +141,10 @@ function applyLanguage(language) {
     const value = copy[element.dataset.i18nAlt];
     if (value !== undefined) element.alt = value;
   });
+  document.querySelectorAll('[data-i18n-aria]').forEach((element) => {
+    const value = copy[element.dataset.i18nAria];
+    if (value !== undefined) element.setAttribute('aria-label', value);
+  });
 
   languageToggle.querySelector('.language-current').textContent = language.toUpperCase();
   languageToggle.querySelector('.language-next').textContent = language === 'en' ? 'PL' : 'EN';
@@ -149,6 +157,13 @@ function applyLanguage(language) {
 
 languageToggle?.addEventListener('click', () => applyLanguage(currentLanguage === 'en' ? 'pl' : 'en'));
 
+function closeMenu(returnFocus = false) {
+  mobileMenu.classList.add('hidden');
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.setAttribute('aria-label', translations[currentLanguage].openMenu);
+  if (returnFocus) menuButton.focus();
+}
+
 menuButton?.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!isOpen));
@@ -157,23 +172,26 @@ menuButton?.addEventListener('click', () => {
 });
 
 mobileMenu?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
-    menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.setAttribute('aria-label', translations[currentLanguage].openMenu);
-  });
+  link.addEventListener('click', () => closeMenu());
 });
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && menuButton?.getAttribute('aria-expanded') === 'true') closeMenu(true);
+});
 
-document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+} else {
+  document.querySelectorAll('.reveal').forEach((element) => element.classList.add('visible'));
+}
 
 copyButton?.addEventListener('click', async () => {
   try {
@@ -187,3 +205,4 @@ copyButton?.addEventListener('click', async () => {
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 applyLanguage(currentLanguage);
+document.documentElement.classList.add('app-ready');
