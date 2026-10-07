@@ -108,6 +108,17 @@ h1, h2, h3 { word-spacing: .11em; }
 .mentor-hero-visual { position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,.12); border-radius: 2.25rem; background: #d7d6d0; box-shadow: 0 35px 120px rgba(0,0,0,.42); }
 .mentor-hero-visual img { display: block; aspect-ratio: 4 / 5; width: 100%; object-fit: cover; object-position: 50% 78%; transform: scale(1.28); transform-origin: 50% 72%; }
 .mentor-photo-caption { position: absolute; left: 1rem; right: 1rem; bottom: 1rem; border: 1px solid rgba(255,255,255,.12); border-radius: 1rem; background: rgba(11,14,19,.88); padding: 1rem; font-size: .75rem; line-height: 1.5; color: #f1eee8; backdrop-filter: blur(12px); }
+.mentor-event-section { max-width: 88rem; margin-inline: auto; padding: 7rem 1.25rem 0; }
+.mentor-event-proof { display: grid; overflow: hidden; border: 1px solid rgba(255,255,255,.1); border-radius: 2rem; background: #121720; }
+.mentor-event-photo { overflow: hidden; background: #080c12; }
+.mentor-event-photo img { display: block; aspect-ratio: 4 / 3; width: 100%; object-fit: cover; object-position: 42% 44%; }
+.mentor-event-photo figcaption { border-top: 1px solid rgba(255,255,255,.1); padding: .9rem 1.1rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .65rem; line-height: 1.5; letter-spacing: .05em; color: #a6b0be; }
+.mentor-event-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 2rem; }
+.mentor-event-copy h2 { margin-top: 1.2rem; max-width: 35rem; font-size: clamp(2.45rem, 5vw, 4.6rem); font-weight: 600; line-height: .97; letter-spacing: -.055em; }
+.mentor-event-copy > p:not(.eyebrow) { margin-top: 1.5rem; max-width: 36rem; line-height: 1.75; color: #9aa4b2; }
+.mentor-event-role { width: 100%; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.25rem; }
+.mentor-event-role span { display: block; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .62rem; text-transform: uppercase; letter-spacing: .15em; color: #a6b0be; }
+.mentor-event-role strong { display: block; margin-top: .6rem; line-height: 1.55; color: #d59a6a; }
 .mentor-section { margin-inline: auto; max-width: 88rem; padding: 7rem 1.25rem; }
 .mentor-section-heading { max-width: 52rem; }
 .mentor-section-heading h2 { margin-top: 1.2rem; font-size: clamp(2.55rem, 5.4vw, 4.8rem); font-weight: 600; line-height: .97; letter-spacing: -.055em; }
@@ -142,7 +153,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #d59a6a; outline-offs
 .reveal { opacity: 1; transform: none; }
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .75s ease var(--delay, 0ms), transform .75s cubic-bezier(.2,.7,.2,1) var(--delay, 0ms); }
 .js .reveal.visible { opacity: 1; transform: translateY(0); }
-@media (min-width: 640px) { .section-shell, .mentor-section, .mentor-audience-grid { padding-inline: 2rem; } .metric { padding-inline: 1.5rem; } .mentoring-callout-copy, .advisory-cta-copy { padding: 3rem; } }
+@media (min-width: 640px) { .section-shell, .mentor-section, .mentor-audience-grid, .mentor-event-section { padding-inline: 2rem; } .metric { padding-inline: 1.5rem; } .mentoring-callout-copy, .advisory-cta-copy, .mentor-event-copy { padding: 3rem; } }
 @media (min-width: 768px) { .section-heading { grid-template-columns: 1fr auto; } .section-heading .eyebrow { grid-column: 1 / -1; } .case-study { grid-template-columns: 5rem minmax(0, 1fr); padding: 2rem; } .case-result { grid-column: 1 / -1; min-width: 0; } .achievement { grid-template-columns: 6rem 1fr auto; padding: 2rem; } .achievement-actions { justify-content: flex-end; } .tool-grid div { display: grid; grid-template-columns: 9rem 1fr; align-items: center; } .tool-grid p { margin-top: 0; } .mentor-offer-grid { grid-template-columns: repeat(3, 1fr); } .mentor-process-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) {
   .section-shell { padding: 9rem 3rem; }
@@ -158,6 +169,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid #d59a6a; outline-offs
   .case-result strong { margin: 0; }
   .case-result span { font-size: .75rem; line-height: 1.6; }
   .mentor-hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(22rem, .92fr); padding: 5rem 3rem 6rem; }
+  .mentor-event-section { padding: 9rem 3rem 0; }
+  .mentor-event-proof { grid-template-columns: minmax(0, 1.25fr) minmax(24rem, .75fr); }
+  .mentor-event-photo { display: grid; min-height: 35rem; grid-template-rows: minmax(0, 1fr) auto; }
+  .mentor-event-photo img { height: 100%; aspect-ratio: auto; object-position: 48% 42%; }
+  .mentor-event-copy { padding: 4rem; }
   .mentoring-callout { grid-template-columns: 1fr 1fr; }
   .mentoring-callout-visual { min-height: 39rem; }
   .advisory-cta { display: block; min-height: 39rem; }
