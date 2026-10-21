@@ -1,6 +1,6 @@
 # Dmytro Kolida, Portfolio
 
-A bilingual GitHub Pages portfolio positioning Dmytro Kolida as a Solutions & Integration Engineer through public work and verified, anonymized evidence from private production repositories.
+A trilingual (EN/PL/IT) GitHub Pages portfolio positioning Dmytro Kolida as a Business Systems & Automation Engineer through public work and verified, anonymized evidence from private production repositories.
 
 ## Preview locally
 
@@ -33,5 +33,9 @@ The site is published at [https://dymirt.github.io/](https://dymirt.github.io/).
 - Static HTML
 - Precompiled Tailwind CSS
 - Custom CSS and JavaScript
-- English and Polish language switch
+- English, Polish and Italian language switch
 - No backend required
+
+## Current profile
+
+Internal AI assistants with employee permission boundaries; standardized document imports; AI-assisted data analysis; older-system improvements; management of 4 servers hosting approximately 30 VMs. These are owner-provided experience statements, not independently measured business outcomes.

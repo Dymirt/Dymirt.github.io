@@ -187,3 +187,5 @@ a:focus-visible, button:focus-visible { outline: 2px solid #d59a6a; outline-offs
 }
 @media (max-width: 639px) { .ownership-note { right: -.25rem; top: 1rem; } .hero-portrait-card { left: .75rem; right: .75rem; bottom: .75rem; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
+
+.collaboration-text { max-width: 48rem; margin: 1.5rem 0 2rem; color: #a7afb3; font-size: 1.05rem; line-height: 1.7; }
