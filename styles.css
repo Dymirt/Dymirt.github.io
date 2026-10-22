@@ -189,3 +189,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid #d59a6a; outline-offs
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
 
 .collaboration-text { max-width: 48rem; margin: 1.5rem 0 2rem; color: #a7afb3; font-size: 1.05rem; line-height: 1.7; }
+
+.experience-list { display: grid; gap: 1.5rem; margin-bottom: 2.25rem; }
+.experience-entry { border-left: 2px solid #cda275; padding-left: 1.2rem; }
+.experience-entry h3 { color: #f4f1eb; font-size: 1.25rem; font-weight: 600; margin: .3rem 0; }
+.experience-entry p { font-size: 1rem; line-height: 1.6; }
+.experience-entry .experience-company { color: #f4f1eb; margin-bottom: .4rem; }
