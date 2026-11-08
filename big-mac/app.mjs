@@ -28,7 +28,7 @@ function drawChart(startYear, endYear) {
   const y = price => 218 - price / 25 * 184;
   const points = years.map((year,index) => `${x(index)},${y(prices[year])}`).join(' ');
   const grid = [5,10,15,20,25].map(value => `<line x1="55" x2="943" y1="${y(value)}" y2="${y(value)}" stroke="#252c37"/><text x="34" y="${y(value)+4}" text-anchor="end">${value}</text>`).join('');
-  const labels = years.filter((year,index) => year === years[0] || year === years.at(-1) || year % 5 === 0).map(year => `<text x="${x(years.indexOf(year))}" y="248" text-anchor="middle">${year}</text>`).join('');
+  const labels = years.filter((year,index) => year === years[0] || year === years.at(-1) || (year % 5 === 0 && years.at(-1) - year >= 2)).map(year => `<text x="${x(years.indexOf(year))}" y="248" text-anchor="middle">${year}</text>`).join('');
   const dots = years.map((year,index) => {
     const selected = year === startYear || year === endYear;
     return `<g><title>${year}: ${money(prices[year])}</title>${selected ? `<line x1="${x(index)}" x2="${x(index)}" y1="${y(prices[year])}" y2="218" stroke="#d59a6a" stroke-dasharray="4 5" opacity=".35"/>` : ''}<circle cx="${x(index)}" cy="${y(prices[year])}" r="${selected ? 6 : 3.5}" fill="${selected ? '#d59a6a' : '#121720'}" stroke="${selected ? '#d59a6a' : '#a6b0be'}" stroke-width="2"/>${selected ? `<text class="chart-value" x="${x(index)}" y="${y(prices[year])-16}" text-anchor="${index === years.length - 1 ? 'end' : index === 0 ? 'start' : 'middle'}">${money(prices[year])}</text>` : ''}</g>`;

@@ -36,3 +36,5 @@ footer p{line-height:1.8}footer.wrap{padding-block:27px}.noscript{background:#12
 @media(max-width:480px){.intro h1{font-size:38px;margin-bottom:12px}.intro-copy{font-size:14px}.intro{padding:25px 0}.breadcrumb{font-size:11px;padding-top:20px}.inputs-panel,.result-panel{padding:22px}.periods{grid-template-columns:1fr 12px 1fr;gap:8px}legend{font-size:13px;margin-bottom:18px}label{font-size:12px}.money-input input{font-size:24px;padding-left:11px;padding-right:29px}.money-input>span{font-size:13px;right:10px;top:22px}.price-note{font-size:11px}.price-note strong{font-size:12px}.input-help{font-size:12px}.result-top{font-size:10px;letter-spacing:.7px}.result-panel h2{font-size:18px}.result-value{font-size:68px;margin:20px 0}.burger-comparison strong{font-size:30px}.metrics{gap:16px}.metric-label{font-size:10px;letter-spacing:.4px}.metrics p{font-size:12px}.metrics strong{font-size:27px}.history h2{font-size:26px}.data-sources{font-size:11px}.chart-legend{font-size:11px}footer .portfolio-brand{font-size:12px}}
 
 .site-header{display:block}.end-dot{background:var(--accent)}
+
+.chart-legend i.selected-key{background:var(--accent)}
