@@ -1,4 +1,4 @@
-import {t,locale,applyMessages} from './world-i18n.mjs?v=20261108-world';
+import {t,locale,applyMessages} from './world-i18n.mjs?v=20261108-empty';
 import {parseAmount,ComparisonError,compareInternational,getExchangeRate} from './international.mjs?v=20261108-world';
 const $=id=>document.getElementById(id);
 const sides=['start','end'];
@@ -27,27 +27,27 @@ function fillSelect(select,items,selected) {
 }
 function populateCountries() {
   const items=Object.keys(db.countries).sort((a,b)=>Number(db.countries[a].historical)-Number(db.countries[b].historical)||countryName(a).localeCompare(countryName(b),locale())).map(code=>({value:code,label:countryName(code)+(db.countries[code].historical?` (${t('historical')})`:'')}));
-  for (const id of ['start-country','end-country','history-country']) fillSelect($(id),items,$(id).value||'POL');
+  for (const id of ['start-country','end-country','history-country']) fillSelect($(id),[{value:'',label:t('chooseCountry')},...items],$(id).value);
 }
-function refreshOptions(side,{initial=false,countryChanged=false}={}) {
+function refreshOptions(side,{countryChanged=false}={}) {
   const country=$(side+'-country').value;
-  const wantedYear=Number($(side+'-year').value)|| (side==='start'?2018:2026);
+  const wantedYear=$(side+'-year').value;
   const manual=$(side+'-manual').checked;
-  const records=db.prices[country];
+  const records=db.prices[country]||{};
   const years=Array.from({length:db.metadata.lastYear-db.metadata.firstYear+1},(_,i)=>db.metadata.firstYear+i);
-  fillSelect($(side+'-year'),years.map(year=>({value:year,label:year+(records[year]||manual?'':` · ${t('unavailable')}`),disabled:!records[year]&&!manual})),wantedYear);
+  fillSelect($(side+'-year'),[{value:'',label:t('chooseYear')},...years.map(year=>({value:year,label:year+(records[year]||manual?'':` · ${t('unavailable')}`),disabled:!records[year]&&!manual}))],wantedYear);
   const observation=records[wantedYear];
-  const native=observation?.currency||db.countries[country].latestCurrency;
+  const native=observation?.currency||db.countries[country]?.latestCurrency||'';
   const current=$(side+'-currency').value;
   const previousNative=$(side+'-currency').dataset.native;
-  const selected=initial?'PLN':countryChanged && (!current||current===previousNative)?native:current||native;
+  const selected=countryChanged && (!current||current===previousNative)?native:current;
   const available=new Set([...(fxIndex.years[wantedYear]?.currencies||[]),native]);
   const currencyRank=code=>{const index=['EUR','PLN','USD'].indexOf(code);return index<0?3:index;};
   const codes=allCurrencyCodes().sort((a,b)=>currencyRank(a)-currencyRank(b)||a.localeCompare(b));
-  fillSelect($(side+'-currency'),codes.map(code=>({value:code,label:code,disabled:!available.has(code)})),selected);
+  fillSelect($(side+'-currency'),[{value:'',label:t('chooseCurrency')},...codes.map(code=>({value:code,label:code,disabled:!available.has(code)}))],selected);
   $(side+'-currency').dataset.native=native;
   const chosenPriceCurrency=manual?$(side+'-price-currency').value||native:native;
-  fillSelect($(side+'-price-currency'),codes.map(code=>({value:code,label:code})),chosenPriceCurrency);
+  fillSelect($(side+'-price-currency'),[{value:'',label:t('chooseCurrency')},...codes.map(code=>({value:code,label:code}))],chosenPriceCurrency);
   $(side+'-custom-price').disabled=!manual;
   $(side+'-price-currency').disabled=!manual;
   $(side+'-unit').textContent=$(side+'-currency').value;
@@ -81,12 +81,12 @@ async function update() {
   const ticket=++revision;
   const start=readPoint('start'),end=readPoint('end');
   for(const [side,point] of [['start',start],['end',end]]) {
-    $(side+'-result-year').textContent=`${countryName(point.country)} · ${point.year}`;
+    $(side+'-result-year').textContent=[countryName(point.country),point.year||''].filter(Boolean).join(' · ');
     $(side+'-unit').textContent=point.currency;
     const observation=observationFor(point);
-    $(side+'-price').textContent=observation && observation.price>0?t('priceNote',{price:money(observation.price,observation.currency),date:observation.date?dateLabel(observation.date):t('manual')}):t('noPrice');
+    $(side+'-price').textContent=observation && observation.price>0?t('priceNote',{price:money(observation.price,observation.currency),date:observation.date?dateLabel(observation.date):t('manual')}):point.country&&point.year?t('noPrice'):'';
     $(side+'-fx').textContent='';
-    $(side+'-amount').setAttribute('aria-invalid',String(!Number.isFinite(point.amount)));
+    $(side+'-amount').setAttribute('aria-invalid',String($(side+'-amount').value.trim()!==''&&!Number.isFinite(point.amount)));
   }
   const units=[];
   for(const point of [start,end]) {
@@ -99,6 +99,8 @@ async function update() {
   $('denomination-note').hidden=!units.length;$('denomination-note').textContent=t('denominationNote',{units:[...new Set(units)].join('; ')});
   $('partial-note').hidden=![start.year,end.year].includes(db.metadata.lastYear);
   $('partial-note').textContent=t('partialNote',{year:db.metadata.lastYear,date:dateLabel(fxIndex.asOf)});
+  const incomplete=sides.some(side=>['country','year','currency','amount'].some(field=>$(side+'-'+field).value.trim()===''));
+  if(incomplete){clearResults();return;}
   try {
     await Promise.all([...new Set([start.year,end.year])].map(loadYear));
     if(ticket!==revision)return;
@@ -133,7 +135,10 @@ async function update() {
 }
 function renderHistory() {
   if(!ready)return;
-  const code=$('history-country').value,records=db.prices[code];
+  const code=$('history-country').value;
+  document.querySelector('.chart-container').hidden=!code;
+  if(!code){$('history-description').textContent='';$('price-chart').replaceChildren();$('price-table').replaceChildren();fillSelect($('history-currency'),[{value:'',label:t('chooseCurrency')}],'');return;}
+  const records=db.prices[code];
   const allYears=Object.keys(records).map(Number).sort((a,b)=>a-b);
   const nativeCurrencies=[...new Set(allYears.map(year=>records[year].currency))];
   const chosenCurrency=nativeCurrencies.includes($('history-currency').value)?$('history-currency').value:db.countries[code].latestCurrency;
@@ -173,17 +178,6 @@ function renderLanguage() {
   $('data-summary').textContent=t('dataSummary',{date:dateLabel(db.metadata.asOf),observations:db.metadata.priceObservations,annual:db.metadata.annualPrices,pairs:db.metadata.annualFxPairs});
   renderCountryList();renderHistory();update();
 }
-function applyScenario(scenario) {
-  const values=scenario==='euro'?{start:['ITA',2025,'EUR','1000'],end:['POL',2025,'EUR','1000']}:scenario==='watch'?{start:['ITA',2018,'EUR','1000'],end:['POL',2025,'PLN','5000']}:{start:['POL',2018,'PLN','4000'],end:['POL',2026,'PLN','8000']};
-  for(const side of sides) {
-    const [country,year,currency,amount]=values[side];
-    $(side+'-country').value=country;$(side+'-year').value=year;$(side+'-manual').checked=false;
-    refreshOptions(side);$(side+'-currency').value=currency;$(side+'-amount').value=amount;
-  }
-  $('history-country').value=values.start[0];$('history-currency').value='';
-  document.querySelectorAll('[data-scenario]').forEach(button=>button.classList.toggle('active',button.dataset.scenario===scenario));
-  renderHistory();update();
-}
 $('calculator-form').addEventListener('submit',event=>event.preventDefault());
 $('calculator-form').addEventListener('input',event=>{
   if(!ready)return;
@@ -193,13 +187,11 @@ $('calculator-form').addEventListener('input',event=>{
     if(event.target.id.endsWith('-country')){$('history-country').value=$(side+'-country').value;$('history-currency').value='';}
     renderHistory();
   }
-  document.querySelectorAll('[data-scenario]').forEach(button=>button.classList.remove('active'));
   update();
 });
 $('history-country').addEventListener('change',()=>{$('history-currency').value='';renderHistory();});
 $('history-currency').addEventListener('change',renderHistory);
 $('country-search').addEventListener('input',renderCountryList);
-for(const button of document.querySelectorAll('[data-scenario]'))button.addEventListener('click',()=>{if(ready)applyScenario(button.dataset.scenario);});
 document.addEventListener('portfolio-language',renderLanguage);
 applyMessages();
 try {
@@ -207,7 +199,7 @@ try {
     const response=await fetch(new URL(path,import.meta.url));if(!response.ok)throw new Error('Database load');return response.json();
   }));
   ready=true;
-  populateCountries();sides.forEach(side=>refreshOptions(side,{initial:true}));
+  populateCountries();sides.forEach(side=>refreshOptions(side));
   document.querySelectorAll('#calculator-form> .periods>fieldset').forEach(fieldset=>fieldset.disabled=false);
   // Custom-price fields keep their own disabled state when the containing fieldset is enabled.
   sides.forEach(side=>refreshOptions(side));

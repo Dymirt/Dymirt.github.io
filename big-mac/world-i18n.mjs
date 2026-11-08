@@ -82,7 +82,10 @@ const copy = {
     "historical": "historyczne",
     "noCountryMatches": "Brak pasujących krajów.",
     "unavailable": "brak danych",
-    "opening": "cena otwarcia"
+    "opening": "cena otwarcia",
+    "chooseCountry": "Wybierz kraj",
+    "chooseYear": "Wybierz rok",
+    "chooseCurrency": "Wybierz walutę"
   },
   "en": {
     "headingFirst": "Money over time.",
@@ -167,7 +170,10 @@ const copy = {
     "historical": "historical",
     "noCountryMatches": "No matching countries.",
     "unavailable": "no data",
-    "opening": "opening price"
+    "opening": "opening price",
+    "chooseCountry": "Choose a country",
+    "chooseYear": "Choose a year",
+    "chooseCurrency": "Choose a currency"
   },
   "it": {
     "headingFirst": "Il valore del denaro.",
@@ -252,7 +258,10 @@ const copy = {
     "historical": "storico",
     "noCountryMatches": "Nessun paese trovato.",
     "unavailable": "nessun dato",
-    "opening": "prezzo di apertura"
+    "opening": "prezzo di apertura",
+    "chooseCountry": "Scegli un paese",
+    "chooseYear": "Scegli un anno",
+    "chooseCurrency": "Scegli una valuta"
   }
 };
 export const language = () => Object.hasOwn(copy,document.documentElement.lang) ? document.documentElement.lang : 'pl';

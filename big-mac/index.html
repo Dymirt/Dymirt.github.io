@@ -12,9 +12,9 @@
   <meta property="og:url" content="https://dymirt.github.io/big-mac/">
   <meta property="og:type" content="website">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css?v=20261108-world">
-  <script type="module" src="./app.mjs?v=20261108-world"></script>
-  <link rel="stylesheet" href="../shared/site-layout.css?v=20261108-world">
+  <link rel="stylesheet" href="./style.css?v=20261108-empty">
+  <script type="module" src="./app.mjs?v=20261108-empty"></script>
+  <link rel="stylesheet" href="../shared/site-layout.css?v=20261108-empty">
 </head>
 <body data-site-page="big-mac">
   <a href="#main" class="skip-link" data-msg="skip">Przejdź do kalkulatora</a>
@@ -52,7 +52,6 @@
   <main class="wrap" id="main">
     <div class="breadcrumb"><a href="../">Portfolio</a><span>/</span><span>Real Big Mac</span><span class="country" id="coverage-badge"></span></div>
     <section class="intro" aria-labelledby="title"><div><h1 id="title"><span data-msg="headingFirst"></span><br><span data-msg="headingSecond"></span></h1><p class="intro-copy" data-msg="intro"></p></div></section>
-    <div class="examples" aria-label="Przykłady" data-msg-aria="examples"><span data-msg="examples"></span><button type="button" data-scenario="poland" data-msg="examplePoland"></button><button type="button" data-scenario="euro" data-msg="exampleEuro"></button><button type="button" data-scenario="watch" data-msg="exampleWatch"></button></div>
     <p id="load-status" role="status" data-msg="loading"></p>
     <section class="calculator international-calculator" aria-label="Porównanie kwot" data-msg-aria="comparison">
       <div class="inputs-panel"><div class="section-heading"><h2 data-msg="compareTitle"></h2></div>
@@ -61,7 +60,7 @@
             <fieldset disabled><legend><span class="period-dot"></span> <span data-msg="start"></span></legend>
               <label for="start-country" data-msg="country"></label><div class="select-wrap"><select id="start-country"></select></div>
               <div class="year-currency"><div><label for="start-year" data-msg="year"></label><div class="select-wrap"><select id="start-year"></select></div></div><div><label for="start-currency" data-msg="currency"></label><div class="select-wrap"><select id="start-currency"></select></div></div></div>
-              <label for="start-amount" data-msg="amount"></label><div class="money-input"><input id="start-amount" inputmode="decimal" value="4000" autocomplete="off" aria-describedby="form-error"><span id="start-unit">PLN</span></div>
+              <label for="start-amount" data-msg="amount"></label><div class="money-input"><input id="start-amount" inputmode="decimal" autocomplete="off" aria-describedby="form-error"><span id="start-unit"></span></div>
               <p class="point-price" id="start-price"></p><p class="point-fx" id="start-fx"></p>
               <details class="custom-price"><summary data-msg="customPrice"></summary><label class="check-label"><input id="start-manual" type="checkbox"><span data-msg="useCustomPrice"></span></label><div class="custom-price-fields"><label><span data-msg="burgerPrice"></span><input id="start-custom-price" inputmode="decimal" autocomplete="off"></label><label><span data-msg="localCurrency"></span><select id="start-price-currency"></select></label></div></details>
             </fieldset>
@@ -69,7 +68,7 @@
             <fieldset disabled><legend><span class="period-dot end-dot"></span> <span data-msg="end"></span></legend>
               <label for="end-country" data-msg="country"></label><div class="select-wrap"><select id="end-country"></select></div>
               <div class="year-currency"><div><label for="end-year" data-msg="year"></label><div class="select-wrap"><select id="end-year"></select></div></div><div><label for="end-currency" data-msg="currency"></label><div class="select-wrap"><select id="end-currency"></select></div></div></div>
-              <label for="end-amount" data-msg="amount"></label><div class="money-input"><input id="end-amount" inputmode="decimal" value="8000" autocomplete="off" aria-describedby="form-error"><span id="end-unit">PLN</span></div>
+              <label for="end-amount" data-msg="amount"></label><div class="money-input"><input id="end-amount" inputmode="decimal" autocomplete="off" aria-describedby="form-error"><span id="end-unit"></span></div>
               <p class="point-price" id="end-price"></p><p class="point-fx" id="end-fx"></p>
               <details class="custom-price"><summary data-msg="customPrice"></summary><label class="check-label"><input id="end-manual" type="checkbox"><span data-msg="useCustomPrice"></span></label><div class="custom-price-fields"><label><span data-msg="burgerPrice"></span><input id="end-custom-price" inputmode="decimal" autocomplete="off"></label><label><span data-msg="localCurrency"></span><select id="end-price-currency"></select></label></div></details>
             </fieldset>
@@ -95,6 +94,6 @@
 </footer>
 <!-- shared:footer:end -->
   <noscript><p class="noscript">Włącz JavaScript, aby korzystać z kalkulatora.</p></noscript>
-  <script src="../shared/site-layout.js?v=20261108-world"></script>
+  <script src="../shared/site-layout.js?v=20261108-empty"></script>
 </body>
 </html>
