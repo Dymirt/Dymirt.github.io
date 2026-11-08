@@ -1,6 +1,6 @@
 # Dmytro Kolida, Portfolio
 
-A trilingual (EN/PL/IT) GitHub Pages portfolio positioning Dmytro Kolida as a Business Systems & Automation Engineer through public work and verified, anonymized evidence from private production repositories.
+A trilingual (EN/PL/IT) GitHub Pages portfolio positioning Dmytro Kolida as a specialist who combines an entrepreneur's perspective with technical delivery. The offer focuses on system development, process optimization and technical stabilization in critical situations, supported by public work and anonymized evidence.
 
 ## Preview locally
 
@@ -36,9 +36,9 @@ The site is published at [https://dymirt.github.io/](https://dymirt.github.io/).
 - English, Polish and Italian language switch
 - No backend required
 
-## Current profile
+## Current positioning
 
-Internal AI assistants with employee permission boundaries; standardized document imports; AI-assisted data analysis; older-system improvements; management of 4 servers hosting approximately 30 VMs. These are owner-provided experience statements, not independently measured business outcomes.
+Owner-level understanding of cost, risk and operational continuity combined with hands-on system delivery. The site does not publish employer names, workplace history or a public CV. Production examples remain anonymized and are presented as evidence of the problems solved rather than as an employment timeline.
 
 ## Real Big Mac
 

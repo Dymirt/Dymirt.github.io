@@ -1,8 +1,8 @@
 (() => {
   const copy = {
-    en:{navLabel:'Main navigation',homeLabel:'Dmytro Kolida, home',expertise:'Expertise',work:'Selected work',about:'Experience',mentoring:'Mentoring',contact:'Contact',languageLabel:'Language selection',openMenu:'Open menu',closeMenu:'Close menu',footer:'Built for clarity, reliability, and the web.',backTop:'Back to top'},
-    pl:{navLabel:'Główna nawigacja',homeLabel:'Dmytro Kolida, strona główna',expertise:'Kompetencje',work:'Wybrane realizacje',about:'Doświadczenie',mentoring:'Mentoring',contact:'Kontakt',languageLabel:'Wybór języka',openMenu:'Otwórz menu',closeMenu:'Zamknij menu',footer:'Przejrzystość, niezawodność i użyteczność.',backTop:'Na górę'},
-    it:{navLabel:'Navigazione principale',homeLabel:'Dmytro Kolida, pagina iniziale',expertise:'Competenze',work:'Progetti selezionati',about:'Esperienza',mentoring:'Mentoring',contact:'Contatti',languageLabel:'Selezione della lingua',openMenu:'Apri il menu',closeMenu:'Chiudi il menu',footer:'Chiarezza, affidabilità e utilità sul web.',backTop:'Torna in alto'}
+    en:{navLabel:'Main navigation',homeLabel:'Dmytro Kolida, home',expertise:'Expertise',work:'Selected work',about:'How I help',mentoring:'Mentoring',contact:'Contact',languageLabel:'Language selection',openMenu:'Open menu',closeMenu:'Close menu',footer:'Built for clarity, reliability, and the web.',backTop:'Back to top'},
+    pl:{navLabel:'Główna nawigacja',homeLabel:'Dmytro Kolida, strona główna',expertise:'Kompetencje',work:'Wybrane realizacje',about:'Jak pomagam',mentoring:'Mentoring',contact:'Kontakt',languageLabel:'Wybór języka',openMenu:'Otwórz menu',closeMenu:'Zamknij menu',footer:'Przejrzystość, niezawodność i użyteczność.',backTop:'Na górę'},
+    it:{navLabel:'Navigazione principale',homeLabel:'Dmytro Kolida, pagina iniziale',expertise:'Competenze',work:'Progetti selezionati',about:'Come posso aiutare',mentoring:'Mentoring',contact:'Contatti',languageLabel:'Selezione della lingua',openMenu:'Apri menu',closeMenu:'Chiudi menu',footer:'Chiarezza, affidabilità e utilità sul web.',backTop:'Torna in alto'}
   };
   const button = document.getElementById('menuButton');
   const menu = document.getElementById('mobileMenu');
