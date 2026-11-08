@@ -1,8 +1,9 @@
+import {t, locale, translateStaticContent} from './i18n.mjs?v=20261108-shared';
 import {observations, prices, parseAmount, compare} from './calculator.mjs';
 
 const $ = id => document.getElementById(id);
-const number = value => new Intl.NumberFormat('pl-PL', {minimumFractionDigits:1, maximumFractionDigits:1}).format(value);
-const money = value => new Intl.NumberFormat('pl-PL', {style:'currency', currency:'PLN'}).format(value);
+const number = value => new Intl.NumberFormat(locale(), {minimumFractionDigits:1, maximumFractionDigits:1}).format(value);
+const money = value => new Intl.NumberFormat(locale(), {style:'currency', currency:'PLN'}).format(value);
 const percent = value => `${value > 0.000001 ? '+' : value < -0.000001 ? '−' : ''}${number(Math.abs(value))}%`;
 const years = Object.keys(prices).map(Number);
 for (const id of ['start-year','end-year']) {
@@ -15,13 +16,15 @@ const sourceLinks = {
   historical:'https://github.com/TheEconomist/big-mac-data/blob/master/source-data/big-mac-historical-source-data.csv',
   economist:'https://github.com/TheEconomist/big-mac-data/blob/master/output-data/big-mac-full-index.csv'
 };
-const dateLabel = value => new Intl.DateTimeFormat('pl-PL', {timeZone:'UTC'}).format(new Date(value));
+const dateLabel = value => new Intl.DateTimeFormat(locale(), {timeZone:'UTC'}).format(new Date(value));
+function renderTable() {
 $('price-table').innerHTML = Array.from({length:years.at(-1)-years[0]+1}, (_,index) => years[0]+index).map(year => {
-  if (!observations[year]) return `<tr><th scope="row">${year}</th><td colspan="4">Brak potwierdzonych danych — rok niedostępny w kalkulatorze</td></tr>`;
+  if (!observations[year]) return `<tr><th scope="row">${year}</th><td colspan="4">${t('Brak potwierdzonych danych — rok niedostępny w kalkulatorze')}</td></tr>`;
   const entry = observations[year];
   const link = entry.source === 'opening' ? sourceLinks.opening : year < 2000 ? sourceLinks.historical : sourceLinks.economist;
-  return `<tr data-year="${year}"><th scope="row">${year}</th><td>${money(entry.price)}</td><td>${prices[year-1] ? percent((entry.price/prices[year-1]-1)*100) : '—'}</td><td>${dateLabel(entry.date)}</td><td><a href="${link}" target="_blank" rel="noopener noreferrer">${entry.source === 'opening' ? 'DSH · otwarcie' : 'The Economist'} ↗</a></td></tr>`;
+  return `<tr data-year="${year}"><th scope="row">${year}</th><td>${money(entry.price)}</td><td>${prices[year-1] ? percent((entry.price/prices[year-1]-1)*100) : '—'}</td><td>${dateLabel(entry.date)}</td><td><a href="${link}" target="_blank" rel="noopener noreferrer">${entry.source === 'opening' ? t('DSH · otwarcie') : 'The Economist'} ↗</a></td></tr>`;
 }).join('');
+}
 
 function drawChart(startYear, endYear) {
   const x = index => 55 + (years[index] - years[0]) / (years.at(-1) - years[0]) * 888;
@@ -33,7 +36,7 @@ function drawChart(startYear, endYear) {
     const selected = year === startYear || year === endYear;
     return `<g><title>${year}: ${money(prices[year])}</title>${selected ? `<line x1="${x(index)}" x2="${x(index)}" y1="${y(prices[year])}" y2="218" stroke="#9b5734" stroke-dasharray="4 5" opacity=".35"/>` : ''}<circle cx="${x(index)}" cy="${y(prices[year])}" r="${selected ? 6 : 3.5}" fill="${selected ? '#9b5734' : '#fffefa'}" stroke="${selected ? '#9b5734' : '#68745a'}" stroke-width="2"/>${selected ? `<text class="chart-value" x="${x(index)}" y="${y(prices[year])-16}" text-anchor="${index === years.length - 1 ? 'end' : index === 0 ? 'start' : 'middle'}">${money(prices[year])}</text>` : ''}</g>`;
   }).join('');
-  $('price-chart').innerHTML = `<title id="chart-title">Cena Big Maca w Polsce w latach 1992–2026</title><desc id="chart-desc">Cena wzrosła z 2,50 zł (po denominacji) do 23,50 zł. Brak danych za 1993 rok. Zaznaczone lata: ${startYear} i ${endYear}. Pełne dane w tabeli poniżej.</desc>${grid}<polygon points="55,218 ${points} 943,218" fill="#9b5734" opacity=".06"/><line x1="${x(0)}" y1="${y(prices[years[0]])}" x2="${x(1)}" y2="${y(prices[years[1]])}" stroke="#68745a" stroke-width="2.5" stroke-dasharray="4 5"/><polyline points="${years.slice(1).map((year,index) => `${x(index+1)},${y(prices[year])}`).join(' ')}" fill="none" stroke="#68745a" stroke-width="2.5" stroke-linejoin="round"/>${dots}${labels}`;
+  $('price-chart').innerHTML = `<title id="chart-title">${t('Cena Big Maca w Polsce w latach 1992–2026')}</title><desc id="chart-desc">${t('chartDescription',{startYear,endYear})}</desc>${grid}<polygon points="55,218 ${points} 943,218" fill="#9b5734" opacity=".06"/><line x1="${x(0)}" y1="${y(prices[years[0]])}" x2="${x(1)}" y2="${y(prices[years[1]])}" stroke="#68745a" stroke-width="2.5" stroke-dasharray="4 5"/><polyline points="${years.slice(1).map((year,index) => `${x(index+1)},${y(prices[year])}`).join(' ')}" fill="none" stroke="#68745a" stroke-width="2.5" stroke-linejoin="round"/>${dots}${labels}`;
 }
 
 function update() {
@@ -50,15 +53,15 @@ function update() {
   const endAmount = parseAmount($('end-amount').value);
   const valid = Number.isFinite(startAmount) && Number.isFinite(endAmount);
   $('form-error').hidden = valid;
-  $('form-error').textContent = valid ? '' : 'Podaj obie kwoty większe od zera (maks. 1 bilion zł, do 2 miejsc po przecinku).';
+  $('form-error').textContent = valid ? '' : t('Podaj obie kwoty większe od zera (maks. 1 bilion zł, do 2 miejsc po przecinku).');
   for (const [id, value] of [['start-amount',startAmount],['end-amount',endAmount]]) $(id).setAttribute('aria-invalid', String(!Number.isFinite(value)));
   $('result-panel').classList.toggle('invalid', !valid);
   if (!valid) {
     $('result-panel').classList.remove('positive', 'neutral');
     $('real-change').textContent = '—';
-    $('result-title').textContent = 'Uzupełnij porównywane kwoty.';
+    $('result-title').textContent = t('Uzupełnij porównywane kwoty.');
     for (const id of ['start-burgers','end-burgers','nominal-change','price-change','equivalent-amount']) $(id).textContent = '—';
-    $('equivalent-description').textContent = 'Kwota odpowiadająca tej samej liczbie burgerów';
+    $('equivalent-description').textContent = t('Kwota odpowiadająca tej samej liczbie burgerów');
     return;
   }
   const result = compare(startYear,startAmount,endYear,endAmount);
@@ -67,7 +70,7 @@ function update() {
   $('result-panel').classList.toggle('neutral', same);
   document.querySelector('.result-icon').textContent = same ? '→' : result.realChange > 0 ? '↗' : '↘';
   $('real-change').replaceChildren(document.createTextNode(percent(result.realChange).slice(0,-1)), Object.assign(document.createElement('span'), {textContent:'%'}));
-  $('result-title').textContent = same ? 'Wartość w Big Macach bez zmian.' : result.realChange > 0 ? 'Wartość w Big Macach wzrosła.' : 'Wartość w Big Macach spadła.';
+  $('result-title').textContent = same ? t('Wartość w Big Macach bez zmian.') : result.realChange > 0 ? t('Wartość w Big Macach wzrosła.') : t('Wartość w Big Macach spadła.');
   $('start-result-year').textContent = startYear;
   $('end-result-year').textContent = endYear;
   $('start-burgers').textContent = number(result.startBurgers);
@@ -75,8 +78,14 @@ function update() {
   $('nominal-change').textContent = percent(result.nominalChange);
   $('price-change').textContent = percent(result.priceChange);
   $('equivalent-amount').textContent = money(result.equivalentAmount);
-  $('equivalent-description').textContent = `W ${endYear}, równowartość ${money(startAmount)} w ${startYear}`;
+  $('equivalent-description').textContent = t('equivalentDescription',{endYear,amount:money(startAmount),startYear});
 }
 $('calculator-form').addEventListener('submit', event => event.preventDefault());
 $('calculator-form').addEventListener('input', update);
-update();
+function renderLanguage() {
+  translateStaticContent();
+  renderTable();
+  update();
+}
+document.addEventListener('portfolio-language',renderLanguage);
+renderLanguage();

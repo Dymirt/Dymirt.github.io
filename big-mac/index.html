@@ -12,16 +12,43 @@
   <meta property="og:url" content="https://dymirt.github.io/big-mac/">
   <meta property="og:type" content="website">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css?v=20261108-light">
-  <script type="module" src="./app.mjs?v=20261108-light"></script>
+  <link rel="stylesheet" href="./style.css?v=20261108-shared">
+  <script type="module" src="./app.mjs?v=20261108-shared"></script>
+  <link rel="stylesheet" href="../shared/site-layout.css?v=20261108-shared">
 </head>
-<body>
+<body data-site-page="big-mac">
   <a href="#main" class="skip-link">Przejdź do kalkulatora</a>
-  <header class="site-header"><nav class="header-inner wrap" aria-label="Główna nawigacja">
-    <a class="portfolio-brand" href="../" aria-label="Dmytro Kolida — portfolio"><span class="dk-mark">DK</span><span>Dmytro Kolida</span></a>
-    <div class="portfolio-nav"><a href="../#work">Portfolio</a><a href="../mentoring/">Mentoring</a><a href="./" aria-current="page">Real Big Mac</a></div>
-    <a class="back-link" href="../">← <span>Wróć do portfolio</span></a>
-  </nav></header>
+  <!-- shared:header:start -->
+<header class="portfolio-header">
+  <nav class="portfolio-header-inner" aria-label="Główna nawigacja" data-shell-aria="navLabel">
+    <a href="../" class="portfolio-home" aria-label="Dmytro Kolida — portfolio" data-shell-aria="homeLabel"><span class="portfolio-monogram">DK</span><span class="portfolio-name">Dmytro Kolida</span></a>
+    <div class="portfolio-links">
+      <a href="../#expertise" data-shell-text="expertise">Kompetencje</a>
+      <a href="../#work" data-shell-text="work">Wybrane realizacje</a>
+      <a href="../#about" data-shell-text="about">Doświadczenie</a>
+      <a href="../mentoring/" data-page="mentoring" data-shell-text="mentoring">Mentoring</a>
+      <a href="../big-mac/" data-page="big-mac">Real Big Mac</a>
+      <a href="../#contact" data-shell-text="contact">Kontakt</a>
+    </div>
+    <div class="portfolio-controls">
+      <div class="portfolio-languages" role="group" aria-label="Wybór języka" data-shell-aria="languageLabel">
+        <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button><span aria-hidden="true">/</span>
+        <button type="button" data-language="pl" lang="pl" aria-label="Polski" aria-pressed="true">PL</button><span aria-hidden="true">/</span>
+        <button type="button" data-language="it" lang="it" aria-label="Italiano" aria-pressed="false">IT</button>
+      </div>
+      <button id="menuButton" class="portfolio-menu-button" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Otwórz menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </nav>
+  <div id="mobileMenu" class="portfolio-mobile-menu" hidden>
+    <a href="../#expertise" data-shell-text="expertise">Kompetencje</a>
+    <a href="../#work" data-shell-text="work">Wybrane realizacje</a>
+    <a href="../#about" data-shell-text="about">Doświadczenie</a>
+    <a href="../mentoring/" data-page="mentoring" data-shell-text="mentoring">Mentoring</a>
+    <a href="../big-mac/" data-page="big-mac">Real Big Mac</a>
+    <a href="../#contact" data-shell-text="contact">Kontakt</a>
+  </div>
+</header>
+<!-- shared:header:end -->
   <main class="wrap" id="main">
     <div class="breadcrumb"><a href="../">Portfolio</a><span>/</span><span>Real Big Mac</span><span class="country">Polska · PLN · 1992–2026</span></div>
     <section class="intro" aria-labelledby="title">
@@ -44,7 +71,15 @@
 
     <section class="history" aria-labelledby="history-title"><div class="history-heading"><div><h2 id="history-title">Historia ceny Big Maca</h2></div><p>Polska · 1992–2026</p></div><div class="chart-container"><svg id="price-chart" viewBox="0 0 1000 260" role="img" aria-labelledby="chart-title chart-desc"><title id="chart-title">Cena Big Maca w Polsce w latach 1992–2026</title><desc id="chart-desc">Cena wzrosła z 2,50 zł (po denominacji) w 1992 roku do 23,50 zł w 2026 roku. Szczegółowe dane znajdują się w tabeli poniżej.</desc></svg></div><div class="chart-legend"><span><i></i> Cena Big Maca w zł</span><span><i class="selected-key"></i> Wybrane lata</span></div><details><summary>Ceny, daty i źródła <span aria-hidden="true">＋</span></summary><div class="table-scroll"><table><caption>Ostatnia dostępna obserwacja w roku; 1992 — cena otwarcia. Ceny w PLN po denominacji. Brak danych za 1993.</caption><thead><tr><th scope="col">Rok</th><th scope="col">Big Mac</th><th scope="col">Zmiana rok do roku</th><th scope="col">Data obserwacji</th><th scope="col">Źródło</th></tr></thead><tbody id="price-table"></tbody></table></div></details><p class="data-sources">Dane: <a href="https://github.com/TheEconomist/big-mac-data">The Economist</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://ekartkazwarszawy.pl/kartka/otwarcie-pierwszej-polsce-restauracji-mcdonalds/">DSH (1992)</a>. Wybrano ostatni pomiar w roku; ceny sprzed 1995 przeliczono po denominacji.</p></section>
 
-  </main><footer class="wrap"><a class="portfolio-brand" href="../"><span class="dk-mark">DK</span><span>Dmytro Kolida</span></a><p>Real Big Mac · Niezależny projekt<br>Bez powiązań z McDonald’s</p><a class="back-link" href="../#work">Pozostałe projekty ↗</a></footer>
+  </main><!-- shared:footer:start -->
+<footer class="portfolio-footer">
+  <div class="portfolio-footer-inner">
+    <p>© <span id="year">2026</span> Dmytro Kolida. <span data-shell-text="footer">Przejrzystość, niezawodność i użyteczność.</span></p>
+    <a href="#main"><span data-shell-text="backTop">Na górę</span> ↑</a>
+  </div>
+</footer>
+<!-- shared:footer:end -->
   <noscript><p class="noscript">Włącz JavaScript, aby korzystać z kalkulatora.</p></noscript>
+  <script src="../shared/site-layout.js?v=20261108-shared"></script>
 </body>
 </html>

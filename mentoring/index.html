@@ -16,48 +16,42 @@
   <script>document.documentElement.classList.add('js'); setTimeout(() => { if (!document.documentElement.classList.contains('app-ready')) document.documentElement.classList.remove('js'); }, 2000);</script>
   <link rel="stylesheet" href="../tailwind.css?v=20260719-2">
   <link rel="stylesheet" href="../styles.css?v=20261007-1">
+  <link rel="stylesheet" href="../shared/site-layout.css?v=20261108-shared">
 </head>
-<body class="mentor-page bg-ink text-paper antialiased selection:bg-acid selection:text-ink">
+<body class="mentor-page bg-ink text-paper antialiased selection:bg-acid selection:text-ink" data-site-page="mentoring">
   <a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
 
-  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/85 backdrop-blur-xl">
-    <nav class="mx-auto flex h-20 max-w-page items-center justify-between px-5 sm:px-8 lg:px-12" aria-label="Main navigation" data-i18n-aria="navLabel">
-      <a href="../" class="group flex items-center gap-3" aria-label="Dmytro Kolida, home" data-i18n-aria="homeLabel">
-        <span class="grid h-9 w-9 place-items-center rounded-full bg-acid font-mono text-xs font-bold text-ink transition-transform group-hover:rotate-12">DK</span>
-        <span class="hidden text-sm font-semibold tracking-tight sm:block">Dmytro Kolida</span>
-      </a>
-
-      <div class="hidden items-center gap-5 text-sm text-fog xl:flex">
-        <a class="nav-link" href="../#work" data-i18n="navWork">Selected work</a>
-        <a class="nav-link" href="../#about" data-i18n="navAbout">About</a>
-        <a class="nav-link text-paper" href="./" aria-current="page" data-i18n="navMentoring">Mentoring</a>
-        <a class="nav-link" href="../big-mac/">Real Big Mac</a>
-        <a class="nav-link" href="#contact" data-i18n="navContact">Contact</a>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <div id="languageToggle" class="language-toggle" role="group" aria-label="Language selection" data-i18n-aria="languageLabel">
-          <button class="language-option" type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
-          <span class="language-separator" aria-hidden="true">/</span>
-          <button class="language-option" type="button" data-language="pl" lang="pl" aria-label="Polski" aria-pressed="false">PL</button>
-          <span class="language-separator" aria-hidden="true">/</span>
-          <button class="language-option" type="button" data-language="it" lang="it" aria-label="Italiano" aria-pressed="false">IT</button>
-        </div>
-        <button id="menuButton" class="grid h-10 w-10 place-items-center rounded-full border border-white/15 xl:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-      </div>
-    </nav>
-    <div id="mobileMenu" class="hidden border-t border-white/10 bg-ink px-5 py-5 xl:hidden">
-      <div class="flex flex-col gap-4 text-lg">
-        <a href="../#work" data-i18n="navWork">Selected work</a>
-        <a href="../#about" data-i18n="navAbout">About</a>
-        <a href="./" aria-current="page" data-i18n="navMentoring">Mentoring</a>
-        <a class="nav-link" href="../big-mac/">Real Big Mac</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
-      </div>
+  <!-- shared:header:start -->
+<header class="portfolio-header">
+  <nav class="portfolio-header-inner" aria-label="Główna nawigacja" data-shell-aria="navLabel">
+    <a href="../" class="portfolio-home" aria-label="Dmytro Kolida — portfolio" data-shell-aria="homeLabel"><span class="portfolio-monogram">DK</span><span class="portfolio-name">Dmytro Kolida</span></a>
+    <div class="portfolio-links">
+      <a href="../#expertise" data-shell-text="expertise">Kompetencje</a>
+      <a href="../#work" data-shell-text="work">Wybrane realizacje</a>
+      <a href="../#about" data-shell-text="about">Doświadczenie</a>
+      <a href="../mentoring/" data-page="mentoring" data-shell-text="mentoring">Mentoring</a>
+      <a href="../big-mac/" data-page="big-mac">Real Big Mac</a>
+      <a href="../#contact" data-shell-text="contact">Kontakt</a>
     </div>
-  </header>
+    <div class="portfolio-controls">
+      <div class="portfolio-languages" role="group" aria-label="Wybór języka" data-shell-aria="languageLabel">
+        <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button><span aria-hidden="true">/</span>
+        <button type="button" data-language="pl" lang="pl" aria-label="Polski" aria-pressed="true">PL</button><span aria-hidden="true">/</span>
+        <button type="button" data-language="it" lang="it" aria-label="Italiano" aria-pressed="false">IT</button>
+      </div>
+      <button id="menuButton" class="portfolio-menu-button" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Otwórz menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </nav>
+  <div id="mobileMenu" class="portfolio-mobile-menu" hidden>
+    <a href="../#expertise" data-shell-text="expertise">Kompetencje</a>
+    <a href="../#work" data-shell-text="work">Wybrane realizacje</a>
+    <a href="../#about" data-shell-text="about">Doświadczenie</a>
+    <a href="../mentoring/" data-page="mentoring" data-shell-text="mentoring">Mentoring</a>
+    <a href="../big-mac/" data-page="big-mac">Real Big Mac</a>
+    <a href="../#contact" data-shell-text="contact">Kontakt</a>
+  </div>
+</header>
+<!-- shared:header:end -->
 
   <main id="main">
     <section id="top" class="mentor-hero">
@@ -186,13 +180,16 @@
     </section>
   </main>
 
-  <footer class="border-t border-white/10">
-    <div class="mx-auto flex max-w-page flex-col gap-3 px-5 py-8 text-xs text-fog sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
-      <p>© <span id="year"></span> Dmytro Kolida. <span data-i18n="footerText">Good questions. Learning by doing.</span></p>
-      <a href="../" class="font-mono uppercase tracking-wider hover:text-acid"><span data-i18n="backPortfolio">Back to portfolio</span> ↖</a>
-    </div>
-  </footer>
+  <!-- shared:footer:start -->
+<footer class="portfolio-footer">
+  <div class="portfolio-footer-inner">
+    <p>© <span id="year">2026</span> Dmytro Kolida. <span data-shell-text="footer">Przejrzystość, niezawodność i użyteczność.</span></p>
+    <a href="#main"><span data-shell-text="backTop">Na górę</span> ↑</a>
+  </div>
+</footer>
+<!-- shared:footer:end -->
 
-  <script src="mentoring.js?v=20261007-1"></script>
+  <script src="../shared/site-layout.js?v=20261108-shared"></script>
+  <script src="mentoring.js?v=20261108-shared"></script>
 </body>
 </html>

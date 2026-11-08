@@ -448,9 +448,6 @@ const translations = {
   }
 };
 
-const menuButton = document.querySelector('#menuButton');
-const mobileMenu = document.querySelector('#mobileMenu');
-const languageOptions = [...document.querySelectorAll('[data-language]')];
 const copyButton = document.querySelector('#copyEmail');
 const toast = document.querySelector('#toast');
 const supportedLanguages = Object.keys(translations);
@@ -495,9 +492,6 @@ function applyLanguage(language) {
     if (value !== undefined) element.setAttribute('aria-label', value);
   });
 
-  languageOptions.forEach((option) => option.setAttribute('aria-pressed', String(option.dataset.language === currentLanguage)));
-  const menuOpen = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-label', menuOpen ? copy.closeMenu : copy.openMenu);
   try {
     localStorage.setItem('portfolio-language', currentLanguage);
   } catch {
@@ -505,29 +499,7 @@ function applyLanguage(language) {
   }
 }
 
-languageOptions.forEach((option) => option.addEventListener('click', () => applyLanguage(option.dataset.language)));
-
-function closeMenu(returnFocus = false) {
-  mobileMenu.classList.add('hidden');
-  menuButton.setAttribute('aria-expanded', 'false');
-  menuButton.setAttribute('aria-label', translations[currentLanguage].openMenu);
-  if (returnFocus) menuButton.focus();
-}
-
-menuButton?.addEventListener('click', () => {
-  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', String(!isOpen));
-  menuButton.setAttribute('aria-label', isOpen ? translations[currentLanguage].openMenu : translations[currentLanguage].closeMenu);
-  mobileMenu.classList.toggle('hidden', isOpen);
-});
-
-mobileMenu?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => closeMenu());
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && menuButton?.getAttribute('aria-expanded') === 'true') closeMenu(true);
-});
+document.addEventListener('portfolio-language', event => applyLanguage(event.detail.language));
 
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {

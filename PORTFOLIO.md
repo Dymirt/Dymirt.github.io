@@ -45,3 +45,9 @@ Internal AI assistants with employee permission boundaries; standardized documen
 The Polish calculator is published at `/big-mac/`, with navigation links from the portfolio and mentoring page. It uses warm light surfaces with the portfolio’s copper accents, runs entirely in the browser, and updates automatically when an amount or year changes. Positive results are green, negative results red.
 
 Data, observation dates, attribution and denomination notes are embedded in the calculator. Test calculations with `npm run test:big-mac`.
+
+## Shared header and footer
+
+All pages use `shared/header.html`, `shared/footer.html`, `shared/site-layout.css` and `shared/site-layout.js`. Edit the shared templates and run `npm run build` (or `npm run sync:layout`) before publishing. The generated HTML is committed, so navigation remains available without JavaScript. The shared controller handles mobile navigation, language selection and the copyright year. Page-specific translations receive the `portfolio-language` event. The calculator supports EN/PL/IT with its own light content theme.
+
+Run `npm run test:layout` to verify that every page contains the current templates and that internal links resolve.

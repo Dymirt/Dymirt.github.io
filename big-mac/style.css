@@ -41,3 +41,5 @@ footer p{line-height:1.8}footer.wrap{padding-block:27px}.noscript{background:#ff
 
 /* Warm light surfaces, with the portfolio identity retained in the navigation. */
 .dk-mark{background:#d59a6a;color:#272c28}.calculator{box-shadow:0 5px 24px #353c2608}.chart-legend i:not(.selected-key){background:#68745a}
+
+body[data-site-page="big-mac"]{padding-top:80px}
