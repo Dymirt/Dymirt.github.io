@@ -42,6 +42,6 @@ Internal AI assistants with employee permission boundaries; standardized documen
 
 ## Real Big Mac
 
-The Polish calculator is published at `/big-mac/`, with navigation links from the portfolio and mentoring page. It uses the portfolio’s dark and copper palette, runs entirely in the browser, and updates automatically when an amount or year changes. Positive results are green, negative results red.
+The Polish calculator is published at `/big-mac/`, with navigation links from the portfolio and mentoring page. It uses warm light surfaces with the portfolio’s copper accents, runs entirely in the browser, and updates automatically when an amount or year changes. Positive results are green, negative results red.
 
 Data, observation dates, attribution and denomination notes are embedded in the calculator. Test calculations with `npm run test:big-mac`.
