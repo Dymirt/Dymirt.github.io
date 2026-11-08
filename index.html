@@ -27,11 +27,12 @@
         <span class="hidden text-sm font-semibold tracking-tight sm:block">Dmytro Kolida</span>
       </a>
 
-      <div class="hidden items-center gap-7 text-sm text-fog xl:flex">
+      <div class="hidden items-center gap-5 text-sm text-fog xl:flex">
         <a class="nav-link" href="#expertise" data-i18n="navExpertise">Expertise</a>
         <a class="nav-link" href="#work" data-i18n="navWork">Selected work</a>
         <a class="nav-link" href="#about" data-i18n="navAbout">Experience</a>
         <a class="nav-link" href="mentoring/" data-i18n="navMentoring">Mentoring</a>
+        <a class="nav-link" href="big-mac/">Real Big Mac</a>
         <a class="nav-link" href="#contact" data-i18n="navContact">Contact</a>
       </div>
 
@@ -53,7 +54,8 @@
     </nav>
     <div id="mobileMenu" class="hidden border-t border-white/10 bg-ink px-5 py-5 xl:hidden">
       <div class="flex flex-col gap-4 text-lg">
-        <a href="#expertise" data-i18n="navExpertise">Expertise</a><a href="#work" data-i18n="navWork">Selected work</a><a href="#about" data-i18n="navAbout">Experience</a><a href="mentoring/" data-i18n="navMentoring">Mentoring</a><a href="#contact" data-i18n="navContact">Contact</a>
+        <a href="#expertise" data-i18n="navExpertise">Expertise</a><a href="#work" data-i18n="navWork">Selected work</a><a href="#about" data-i18n="navAbout">Experience</a><a href="mentoring/" data-i18n="navMentoring">Mentoring</a>
+        <a class="nav-link" href="big-mac/">Real Big Mac</a><a href="#contact" data-i18n="navContact">Contact</a>
       </div>
     </div>
   </header>
@@ -217,6 +219,20 @@
             </div>
           </div>
         </article>
+        <article id="real-big-mac" class="case-study reveal">
+          <div class="case-index">PROJECT / 06</div>
+          <div>
+            <p class="case-kicker" data-i18n="bigMacKicker">Interactive tool · Open data</p>
+            <h3>Real Big Mac</h3>
+            <p data-i18n="bigMacText">Compare prices, income and other amounts over time using the price of a Big Mac in Poland as a common reference. Historical observations from 1992 to 2026, with sources and measurement dates.</p>
+            <div class="tag-row"><span>JavaScript</span><span>Open data</span><span>GitHub Pages</span></div>
+          </div>
+          <div class="case-result">
+            <p data-i18n="bigMacResultLabel">Value over time</p>
+            <strong data-i18n="bigMacResult">Two amounts, one reference point.</strong>
+            <div class="case-note"><span data-i18n="bigMacNote">Prices, property, cars, income and profits. The calculator is in Polish.</span><a class="case-source-link" href="big-mac/" data-i18n="bigMacCta">Open the calculator ↗</a></div>
+          </div>
+        </article>
       </div>
 
       <div class="achievement reveal mt-5">
@@ -331,6 +347,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite" data-i18n="emailCopied">Email copied</div>
-  <script src="script.js?v=20261022-2"></script>
+  <script src="script.js?v=20261108-big-mac"></script>
 </body>
 </html>

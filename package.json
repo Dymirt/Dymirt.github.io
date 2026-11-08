@@ -5,7 +5,8 @@
   "description": "GitHub Pages portfolio for Dmytro Kolida",
   "scripts": {
     "build": "tailwindcss build -i ./tailwind.input.css -o ./tailwind.css --minify",
-    "watch": "tailwindcss build -i ./tailwind.input.css -o ./tailwind.css --watch"
+    "watch": "tailwindcss build -i ./tailwind.input.css -o ./tailwind.css --watch",
+    "test:big-mac": "node --test big-mac/tests/*.test.mjs"
   },
   "devDependencies": {
     "tailwindcss": "3.4.17"

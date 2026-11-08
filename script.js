@@ -1,5 +1,12 @@
 const translations = {
   "en": {
+    "bigMacKicker": "Interactive tool · Open data",
+    "bigMacText": "Compare prices, income and other amounts over time using the price of a Big Mac in Poland as a common reference. Historical observations from 1992 to 2026, with sources and measurement dates.",
+    "bigMacResultLabel": "Value over time",
+    "bigMacResult": "Two amounts, one reference point.",
+    "bigMacNote": "Prices, property, cars, income and profits. The calculator is in Polish.",
+    "bigMacCta": "Open the calculator ↗",
+
     "metaTitle": "Dmytro Kolida | Business systems, automation & AI",
     "metaDescription": "I help businesses connect systems, automate document imports, deploy internal AI assistants and maintain infrastructure. Based near Wyszków, Poland.",
     "ogDescription": "I help businesses connect systems, automate document imports, deploy internal AI assistants and maintain infrastructure. Based near Wyszków, Poland.",
@@ -142,6 +149,13 @@ const translations = {
     "contactRole": "Business systems & automation · Python / PHP · Integrations · Operations"
   },
   "pl": {
+    "bigMacKicker": "Interaktywne narzędzie · Otwarte dane",
+    "bigMacText": "Porównaj ceny, dochody i inne kwoty w czasie, korzystając z ceny Big Maca w Polsce jako wspólnego punktu odniesienia. Obserwacje historyczne od 1992 do 2026 roku, ze źródłami i datami pomiarów.",
+    "bigMacResultLabel": "Wartość w czasie",
+    "bigMacResult": "Dwie kwoty, jeden punkt odniesienia.",
+    "bigMacNote": "Ceny, mieszkania, samochody, dochody i zyski. Kalkulator po polsku.",
+    "bigMacCta": "Otwórz kalkulator ↗",
+
     "metaTitle": "Dmytro Kolida | Systemy biznesowe, automatyzacja i AI",
     "metaDescription": "Pomagam firmom usprawniać pracę: łączę systemy, automatyzuję dokumenty, wdrażam asystentów AI i utrzymuję infrastrukturę. Okolice Wyszkowa.",
     "ogDescription": "Pomagam firmom usprawniać pracę: łączę systemy, automatyzuję dokumenty, wdrażam asystentów AI i utrzymuję infrastrukturę. Okolice Wyszkowa.",
@@ -284,6 +298,13 @@ const translations = {
     "contactRole": "Systemy biznesowe i automatyzacja · Python / PHP · Integracje · Utrzymanie"
   },
   "it": {
+    "bigMacKicker": "Strumento interattivo · Dati aperti",
+    "bigMacText": "Confronta prezzi, redditi e altri importi nel tempo usando il prezzo del Big Mac in Polonia come riferimento comune. Osservazioni dal 1992 al 2026, con fonti e date di rilevazione.",
+    "bigMacResultLabel": "Valore nel tempo",
+    "bigMacResult": "Due importi, un riferimento comune.",
+    "bigMacNote": "Prezzi, immobili, auto, redditi e profitti. Il calcolatore è in polacco.",
+    "bigMacCta": "Apri il calcolatore ↗",
+
     "metaTitle": "Dmytro Kolida | Sistemi aziendali, automazione e AI",
     "metaDescription": "Aiuto le aziende a collegare sistemi, automatizzare documenti, introdurre assistenti AI interni e gestire infrastrutture. Vivo vicino a Wyszków, Polonia.",
     "ogDescription": "Aiuto le aziende a collegare sistemi, automatizzare documenti, introdurre assistenti AI interni e gestire infrastrutture. Vivo vicino a Wyszków, Polonia.",

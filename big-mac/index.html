@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0e13">
+  <meta name="description" content="Porównaj ceny, dochody i inne kwoty w Big Macach w Polsce w latach 1992–2026. Sprawdź zmianę wartości względem ceny burgera.">
+  <title>Real Big Mac | Dmytro Kolida</title>
+  <link rel="canonical" href="https://dymirt.github.io/big-mac/">
+  <meta property="og:title" content="Real Big Mac | Dmytro Kolida">
+  <meta property="og:description" content="Porównaj ceny, dochody i inne kwoty w Big Macach. Polska, 1992–2026.">
+  <meta property="og:url" content="https://dymirt.github.io/big-mac/">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Przejdź do kalkulatora</a>
+  <header class="site-header"><nav class="header-inner wrap" aria-label="Główna nawigacja">
+    <a class="portfolio-brand" href="../" aria-label="Dmytro Kolida — portfolio"><span class="dk-mark">DK</span><span>Dmytro Kolida</span></a>
+    <div class="portfolio-nav"><a href="../#work">Portfolio</a><a href="../mentoring/">Mentoring</a><a href="./" aria-current="page">Real Big Mac</a></div>
+    <a class="back-link" href="../">← <span>Wróć do portfolio</span></a>
+  </nav></header>
+  <main class="wrap" id="main">
+    <div class="breadcrumb"><a href="../">Portfolio</a><span>/</span><span>Real Big Mac</span><span class="country">Polska · PLN · 1992–2026</span></div>
+    <section class="intro" aria-labelledby="title">
+      <div><h1 id="title">Wartość pieniądza.<br><span>W Big Macach.</span></h1><p class="intro-copy">Porównaj ceny, dochody i inne kwoty między wybranymi latami.</p></div>
+    </section>
+
+    <section class="calculator" aria-label="Porównanie kwot">
+      <div class="inputs-panel"><div class="section-heading"><h2>Porównaj dwie kwoty.</h2></div>
+        <form id="calculator-form" novalidate>
+          <div class="periods"><fieldset><legend><span class="period-dot"></span> Punkt startowy</legend><label for="start-year">Rok</label><div class="select-wrap"><select id="start-year" name="start-year"></select></div><label for="start-amount">Kwota w złotych</label><div class="money-input"><input id="start-amount" name="start-amount" type="text" inputmode="decimal" value="4000" autocomplete="off" aria-describedby="input-help form-error"><span>zł</span></div><p class="price-note">Big Mac w tym roku <strong id="start-price"></strong></p></fieldset>
+          <div class="period-arrow" aria-hidden="true">→</div>
+          <fieldset><legend><span class="period-dot end-dot"></span> Punkt końcowy</legend><label for="end-year">Rok</label><div class="select-wrap"><select id="end-year" name="end-year"></select></div><label for="end-amount">Kwota w złotych</label><div class="money-input"><input id="end-amount" name="end-amount" type="text" inputmode="decimal" value="8000" autocomplete="off" aria-describedby="input-help form-error"><span>zł</span></div><p class="price-note">Big Mac w tym roku <strong id="end-price"></strong></p></fieldset></div>
+          <p id="input-help" class="input-help">Użyj tej samej jednostki, np. zł za m² lub zł miesięcznie.</p><p id="denomination-note" class="form-error" hidden>Przed 1995 r. wpisz kwotę po denominacji: 10 000 starych zł = 1 zł.</p><p id="form-error" class="form-error" role="alert" hidden></p>
+        </form>
+      </div>
+      <div class="result-panel" id="result-panel"><div class="result-top"><span>ZMIANA WARTOŚCI W BIG MACACH</span><span class="result-icon" aria-hidden="true">↘</span></div><div id="result" role="status" aria-live="polite" aria-atomic="true"><p class="result-value" id="real-change">−14,0<span>%</span></p><h2 id="result-title">Wartość w Big Macach spadła.</h2><div class="burger-comparison"><div><span id="start-result-year">2018</span><strong id="start-burgers">396,0</strong><span>Big Maców</span></div><span class="comparison-arrow" aria-hidden="true">→</span><div><span id="end-result-year">2026</span><strong id="end-burgers">340,4</strong><span>Big Maców</span></div></div></div></div>
+    </section>
+
+    <section class="metrics" aria-label="Szczegóły porównania"><article><span class="metric-label">KWOTA W ZŁOTÓWKACH</span><strong id="nominal-change"></strong><p>Zmiana bez uwzględnienia ceny burgera</p></article><article><span class="metric-label">CENA BIG MACA</span><strong id="price-change"></strong><p>Zmiana ceny burgera</p></article><article><span class="metric-label">RÓWNOWARTOŚĆ KWOTY STARTOWEJ</span><strong id="equivalent-amount"></strong><p id="equivalent-description"></p></article></section>
+
+    <section class="history" aria-labelledby="history-title"><div class="history-heading"><div><h2 id="history-title">Historia ceny Big Maca</h2></div><p>Polska · 1992–2026</p></div><div class="chart-container"><svg id="price-chart" viewBox="0 0 1000 260" role="img" aria-labelledby="chart-title chart-desc"><title id="chart-title">Cena Big Maca w Polsce w latach 1992–2026</title><desc id="chart-desc">Cena wzrosła z 2,50 zł (po denominacji) w 1992 roku do 23,50 zł w 2026 roku. Szczegółowe dane znajdują się w tabeli poniżej.</desc></svg></div><div class="chart-legend"><span><i></i> Cena Big Maca w zł</span><span><i class="selected-key"></i> Wybrane lata</span></div><details><summary>Ceny, daty i źródła <span aria-hidden="true">＋</span></summary><div class="table-scroll"><table><caption>Ostatnia dostępna obserwacja w roku; 1992 — cena otwarcia. Ceny w PLN po denominacji. Brak danych za 1993.</caption><thead><tr><th scope="col">Rok</th><th scope="col">Big Mac</th><th scope="col">Zmiana rok do roku</th><th scope="col">Data obserwacji</th><th scope="col">Źródło</th></tr></thead><tbody id="price-table"></tbody></table></div></details><p class="data-sources">Dane: <a href="https://github.com/TheEconomist/big-mac-data">The Economist</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://ekartkazwarszawy.pl/kartka/otwarcie-pierwszej-polsce-restauracji-mcdonalds/">DSH (1992)</a>. Wybrano ostatni pomiar w roku; ceny sprzed 1995 przeliczono po denominacji.</p></section>
+
+  </main><footer class="wrap"><a class="portfolio-brand" href="../"><span class="dk-mark">DK</span><span>Dmytro Kolida</span></a><p>Real Big Mac · Niezależny projekt<br>Bez powiązań z McDonald’s</p><a class="back-link" href="../#work">Pozostałe projekty ↗</a></footer>
+  <noscript><p class="noscript">Włącz JavaScript, aby korzystać z kalkulatora.</p></noscript>
+</body>
+</html>

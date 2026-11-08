@@ -39,3 +39,9 @@ The site is published at [https://dymirt.github.io/](https://dymirt.github.io/).
 ## Current profile
 
 Internal AI assistants with employee permission boundaries; standardized document imports; AI-assisted data analysis; older-system improvements; management of 4 servers hosting approximately 30 VMs. These are owner-provided experience statements, not independently measured business outcomes.
+
+## Real Big Mac
+
+The Polish calculator is published at `/big-mac/`, with navigation links from the portfolio and mentoring page. It uses the portfolio’s dark and copper palette, runs entirely in the browser, and updates automatically when an amount or year changes. Positive results are green, negative results red.
+
+Data, observation dates, attribution and denomination notes are embedded in the calculator. Test calculations with `npm run test:big-mac`.
