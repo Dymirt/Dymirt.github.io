@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f2e9">
-  <meta name="description" content="Porównaj ceny, dochody i inne kwoty w Big Macach w Polsce w latach 1992–2026. Sprawdź zmianę wartości względem ceny burgera.">
+  <meta name="description" content="Porównaj kwoty między krajami, latami i walutami. Historia cen Big Maca oraz średnioroczne kursy walut od 1986 roku.">
   <title>Real Big Mac | Dmytro Kolida</title>
   <link rel="canonical" href="https://dymirt.github.io/big-mac/">
   <meta property="og:title" content="Real Big Mac | Dmytro Kolida">
-  <meta property="og:description" content="Porównaj ceny, dochody i inne kwoty w Big Macach. Polska, 1992–2026.">
+  <meta property="og:description" content="Porównaj siłę nabywczą między krajami i latami, korzystając z cen Big Maca i średniorocznych kursów walut.">
   <meta property="og:url" content="https://dymirt.github.io/big-mac/">
   <meta property="og:type" content="website">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css?v=20261108-shared">
-  <script type="module" src="./app.mjs?v=20261108-shared"></script>
-  <link rel="stylesheet" href="../shared/site-layout.css?v=20261108-shared">
+  <link rel="stylesheet" href="./style.css?v=20261108-world">
+  <script type="module" src="./app.mjs?v=20261108-world"></script>
+  <link rel="stylesheet" href="../shared/site-layout.css?v=20261108-world">
 </head>
 <body data-site-page="big-mac">
-  <a href="#main" class="skip-link">Przejdź do kalkulatora</a>
+  <a href="#main" class="skip-link" data-msg="skip">Przejdź do kalkulatora</a>
   <!-- shared:header:start -->
 <header class="portfolio-header">
   <nav class="portfolio-header-inner" aria-label="Główna nawigacja" data-shell-aria="navLabel">
@@ -50,27 +50,42 @@
 </header>
 <!-- shared:header:end -->
   <main class="wrap" id="main">
-    <div class="breadcrumb"><a href="../">Portfolio</a><span>/</span><span>Real Big Mac</span><span class="country">Polska · PLN · 1992–2026</span></div>
-    <section class="intro" aria-labelledby="title">
-      <div><h1 id="title">Wartość pieniądza.<br><span>W Big Macach.</span></h1><p class="intro-copy">Porównaj ceny, dochody i inne kwoty między wybranymi latami.</p></div>
-    </section>
-
-    <section class="calculator" aria-label="Porównanie kwot">
-      <div class="inputs-panel"><div class="section-heading"><h2>Porównaj dwie kwoty.</h2></div>
-        <form id="calculator-form" novalidate>
-          <div class="periods"><fieldset><legend><span class="period-dot"></span> Punkt startowy</legend><label for="start-year">Rok</label><div class="select-wrap"><select id="start-year" name="start-year"></select></div><label for="start-amount">Kwota w złotych</label><div class="money-input"><input id="start-amount" name="start-amount" type="text" inputmode="decimal" value="4000" autocomplete="off" aria-describedby="input-help form-error"><span>zł</span></div><p class="price-note">Big Mac w tym roku <strong id="start-price"></strong></p></fieldset>
-          <div class="period-arrow" aria-hidden="true">→</div>
-          <fieldset><legend><span class="period-dot end-dot"></span> Punkt końcowy</legend><label for="end-year">Rok</label><div class="select-wrap"><select id="end-year" name="end-year"></select></div><label for="end-amount">Kwota w złotych</label><div class="money-input"><input id="end-amount" name="end-amount" type="text" inputmode="decimal" value="8000" autocomplete="off" aria-describedby="input-help form-error"><span>zł</span></div><p class="price-note">Big Mac w tym roku <strong id="end-price"></strong></p></fieldset></div>
-          <p id="input-help" class="input-help">Użyj tej samej jednostki, np. zł za m² lub zł miesięcznie.</p><p id="denomination-note" class="form-error" hidden>Przed 1995 r. wpisz kwotę po denominacji: 10 000 starych zł = 1 zł.</p><p id="form-error" class="form-error" role="alert" hidden></p>
+    <div class="breadcrumb"><a href="../">Portfolio</a><span>/</span><span>Real Big Mac</span><span class="country" id="coverage-badge"></span></div>
+    <section class="intro" aria-labelledby="title"><div><h1 id="title"><span data-msg="headingFirst"></span><br><span data-msg="headingSecond"></span></h1><p class="intro-copy" data-msg="intro"></p></div></section>
+    <div class="examples" aria-label="Przykłady" data-msg-aria="examples"><span data-msg="examples"></span><button type="button" data-scenario="poland" data-msg="examplePoland"></button><button type="button" data-scenario="euro" data-msg="exampleEuro"></button><button type="button" data-scenario="watch" data-msg="exampleWatch"></button></div>
+    <p id="load-status" role="status" data-msg="loading"></p>
+    <section class="calculator international-calculator" aria-label="Porównanie kwot" data-msg-aria="comparison">
+      <div class="inputs-panel"><div class="section-heading"><h2 data-msg="compareTitle"></h2></div>
+        <form id="calculator-form" novalidate aria-busy="true">
+          <div class="periods">
+            <fieldset disabled><legend><span class="period-dot"></span> <span data-msg="start"></span></legend>
+              <label for="start-country" data-msg="country"></label><div class="select-wrap"><select id="start-country"></select></div>
+              <div class="year-currency"><div><label for="start-year" data-msg="year"></label><div class="select-wrap"><select id="start-year"></select></div></div><div><label for="start-currency" data-msg="currency"></label><div class="select-wrap"><select id="start-currency"></select></div></div></div>
+              <label for="start-amount" data-msg="amount"></label><div class="money-input"><input id="start-amount" inputmode="decimal" value="4000" autocomplete="off" aria-describedby="form-error"><span id="start-unit">PLN</span></div>
+              <p class="point-price" id="start-price"></p><p class="point-fx" id="start-fx"></p>
+              <details class="custom-price"><summary data-msg="customPrice"></summary><label class="check-label"><input id="start-manual" type="checkbox"><span data-msg="useCustomPrice"></span></label><div class="custom-price-fields"><label><span data-msg="burgerPrice"></span><input id="start-custom-price" inputmode="decimal" autocomplete="off"></label><label><span data-msg="localCurrency"></span><select id="start-price-currency"></select></label></div></details>
+            </fieldset>
+            <div class="period-arrow" aria-hidden="true">→</div>
+            <fieldset disabled><legend><span class="period-dot end-dot"></span> <span data-msg="end"></span></legend>
+              <label for="end-country" data-msg="country"></label><div class="select-wrap"><select id="end-country"></select></div>
+              <div class="year-currency"><div><label for="end-year" data-msg="year"></label><div class="select-wrap"><select id="end-year"></select></div></div><div><label for="end-currency" data-msg="currency"></label><div class="select-wrap"><select id="end-currency"></select></div></div></div>
+              <label for="end-amount" data-msg="amount"></label><div class="money-input"><input id="end-amount" inputmode="decimal" value="8000" autocomplete="off" aria-describedby="form-error"><span id="end-unit">PLN</span></div>
+              <p class="point-price" id="end-price"></p><p class="point-fx" id="end-fx"></p>
+              <details class="custom-price"><summary data-msg="customPrice"></summary><label class="check-label"><input id="end-manual" type="checkbox"><span data-msg="useCustomPrice"></span></label><div class="custom-price-fields"><label><span data-msg="burgerPrice"></span><input id="end-custom-price" inputmode="decimal" autocomplete="off"></label><label><span data-msg="localCurrency"></span><select id="end-price-currency"></select></label></div></details>
+            </fieldset>
+          </div>
+          <p id="form-error" class="form-error" role="alert" hidden></p><p id="denomination-note" class="input-help" hidden></p><p id="partial-note" class="input-help" hidden></p>
         </form>
       </div>
-      <div class="result-panel" id="result-panel"><div class="result-top"><span>ZMIANA WARTOŚCI W BIG MACACH</span><span class="result-icon" aria-hidden="true">↘</span></div><div id="result" role="status" aria-live="polite" aria-atomic="true"><p class="result-value" id="real-change">−14,0<span>%</span></p><h2 id="result-title">Wartość w Big Macach spadła.</h2><div class="burger-comparison"><div><span id="start-result-year">2018</span><strong id="start-burgers">396,0</strong><span>Big Maców</span></div><span class="comparison-arrow" aria-hidden="true">→</span><div><span id="end-result-year">2026</span><strong id="end-burgers">340,4</strong><span>Big Maców</span></div></div></div></div>
+      <div class="result-panel" id="result-panel"><div class="result-top"><span data-msg="realChange"></span><span class="result-icon" aria-hidden="true">↘</span></div><div id="result" role="status" aria-live="polite" aria-atomic="true"><p class="result-value" id="real-change">—</p><h2 id="result-title"></h2><div class="burger-comparison"><div><span id="start-result-year"></span><strong id="start-burgers">—</strong><span data-msg="burgers"></span></div><span class="comparison-arrow" aria-hidden="true">→</span><div><span id="end-result-year"></span><strong id="end-burgers">—</strong><span data-msg="burgers"></span></div></div><p class="result-explanation" id="result-explanation"></p></div></div>
     </section>
-
-    <section class="metrics" aria-label="Szczegóły porównania"><article><span class="metric-label">KWOTA W ZŁOTÓWKACH</span><strong id="nominal-change"></strong><p>Zmiana bez uwzględnienia ceny burgera</p></article><article><span class="metric-label">CENA BIG MACA</span><strong id="price-change"></strong><p>Zmiana ceny burgera</p></article><article><span class="metric-label">RÓWNOWARTOŚĆ KWOTY STARTOWEJ</span><strong id="equivalent-amount"></strong><p id="equivalent-description"></p></article></section>
-
-    <section class="history" aria-labelledby="history-title"><div class="history-heading"><div><h2 id="history-title">Historia ceny Big Maca</h2></div><p>Polska, 1992-2026</p></div><div class="chart-container"><svg id="price-chart" viewBox="0 0 1000 260" role="img" aria-labelledby="chart-title chart-desc"><title id="chart-title">Cena Big Maca w Polsce w latach 1992-2026</title><desc id="chart-desc">Cena wzrosła z 2,50 zł (po denominacji) w 1992 roku do 23,50 zł w 2026 roku. Szczegółowe dane znajdują się w tabeli poniżej.</desc></svg></div><div class="chart-legend"><span><i></i> Cena Big Maca w zł</span><span><i class="selected-key"></i> Wybrane lata</span></div><details><summary>Ceny, daty i źródła <span aria-hidden="true">＋</span></summary><div class="table-scroll"><table><caption>Ostatnia dostępna obserwacja w roku; 1992: cena otwarcia. Ceny w PLN po denominacji. Brak danych za 1993.</caption><thead><tr><th scope="col">Rok</th><th scope="col">Big Mac</th><th scope="col">Zmiana rok do roku</th><th scope="col">Data obserwacji</th><th scope="col">Źródło</th></tr></thead><tbody id="price-table"></tbody></table></div></details><p class="data-sources">Dane: <a href="https://github.com/TheEconomist/big-mac-data">The Economist</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://ekartkazwarszawy.pl/kartka/otwarcie-pierwszej-polsce-restauracji-mcdonalds/">DSH (1992)</a>. Wybrano ostatni pomiar w roku; ceny sprzed 1995 przeliczono po denominacji.</p></section>
-
+    <section class="metrics" aria-label="Szczegóły porównania" data-msg-aria="metrics"><article><span class="metric-label" data-msg="nominalLabel"></span><strong id="nominal-change">—</strong><p id="nominal-description"></p></article><article><span class="metric-label" data-msg="nominalDifference"></span><strong id="nominal-difference">—</strong><p id="nominal-basis"></p></article><article><span class="metric-label" data-msg="equivalentLabel"></span><strong id="equivalent-amount">—</strong><p id="equivalent-description"></p></article></section>
+    <section class="history" aria-labelledby="history-title"><div class="history-heading"><h2 id="history-title" data-msg="historyTitle"></h2><div class="history-country"><label for="history-country" data-msg="country"></label><select id="history-country"></select><label for="history-currency" data-msg="chartCurrency"></label><select id="history-currency"></select></div></div><p class="input-help" id="history-description"></p><div class="chart-container"><svg id="price-chart" viewBox="0 0 1000 260" role="img" aria-labelledby="chart-title chart-desc"></svg></div>
+      <details><summary><span data-msg="priceTable"></span><span aria-hidden="true">＋</span></summary><div class="table-scroll"><table><caption data-msg="priceCaption"></caption><thead><tr><th scope="col" data-msg="year"></th><th scope="col" data-msg="burgerPrice"></th><th scope="col" data-msg="date"></th><th scope="col" data-msg="source"></th></tr></thead><tbody id="price-table"></tbody></table></div></details>
+      <details><summary><span id="countries-title" data-msg="countryList"></span><span aria-hidden="true">＋</span></summary><label for="country-search" data-msg="searchCountry"></label><input id="country-search" class="country-search" type="search"><div class="table-scroll"><table><caption data-msg="countryCaption"></caption><thead><tr><th scope="col" data-msg="country"></th><th scope="col" data-msg="range"></th><th scope="col" data-msg="yearsCount"></th><th scope="col" data-msg="latestPrice"></th></tr></thead><tbody id="country-table"></tbody></table></div></details>
+      <details class="method-details"><summary><span data-msg="methodTitle"></span><span aria-hidden="true">＋</span></summary><p data-msg="methodText"></p><p data-msg="fxMethod"></p><p data-msg="dataGaps"></p><p data-msg="normalizations"></p><p data-msg="gainNote"></p><p id="data-summary"></p><p id="data-coverage-note"></p><p class="data-sources"><span data-msg="sources"></span>: <a href="https://github.com/TheEconomist/big-mac-data/blob/master/source-data/big-mac-source-data-v2.csv">The Economist · v2</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://frankfurter.dev/">Frankfurter</a> · <a href="https://databank.worldbank.org/metadataglossary/world-development-indicators/series/PA.NUS.FCRF">World Bank</a> · <a href="https://ekartkazwarszawy.pl/kartka/otwarcie-pierwszej-polsce-restauracji-mcdonalds/">DSH (Polska 1992)</a></p></details>
+      <div class="data-downloads"><span data-msg="downloadData"></span><a href="./data/countries.csv" download data-msg="countriesCsv"></a><a href="./data/prices.csv" download data-msg="pricesCsv"></a><a href="./data/fx.csv" download data-msg="fxCsv"></a><a href="./data/metadata.json" download data-msg="metadataJson"></a></div>
+    </section>
   </main><!-- shared:footer:start -->
 <footer class="portfolio-footer">
   <div class="portfolio-footer-inner">
@@ -80,6 +95,6 @@
 </footer>
 <!-- shared:footer:end -->
   <noscript><p class="noscript">Włącz JavaScript, aby korzystać z kalkulatora.</p></noscript>
-  <script src="../shared/site-layout.js?v=20261108-positioning"></script>
+  <script src="../shared/site-layout.js?v=20261108-world"></script>
 </body>
 </html>

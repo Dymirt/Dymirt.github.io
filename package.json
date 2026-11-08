@@ -8,7 +8,8 @@
     "watch": "tailwindcss build -i ./tailwind.input.css -o ./tailwind.css --watch",
     "test:big-mac": "node --test big-mac/tests/*.test.mjs",
     "sync:layout": "node scripts/sync-layout.mjs",
-    "test:layout": "node --test tests/layout.test.mjs"
+    "test:layout": "node --test tests/layout.test.mjs",
+    "update:big-mac-data": "python3 scripts/update-big-mac-data.py"
   },
   "devDependencies": {
     "tailwindcss": "3.4.17"

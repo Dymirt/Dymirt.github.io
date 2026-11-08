@@ -51,3 +51,11 @@ Data, observation dates, attribution and denomination notes are embedded in the 
 All pages use `shared/header.html`, `shared/footer.html`, `shared/site-layout.css` and `shared/site-layout.js`. Edit the shared templates and run `npm run build` (or `npm run sync:layout`) before publishing. The generated HTML is committed, so navigation remains available without JavaScript. The shared controller handles mobile navigation, language selection and the copyright year. Page-specific translations receive the `portfolio-language` event. The calculator supports EN/PL/IT with its own light content theme.
 
 Run `npm run test:layout` to verify that every page contains the current templates and that internal links resolve.
+
+## International calculator data
+
+`big-mac/` now supports independent country, year and amount-currency selection for both cash flows, a clearly labelled custom burger price, nominal profit/loss in the ending currency, and burger-adjusted purchasing power. The country list, historical observations and annual FX CSV exports are included in `big-mac/data/`.
+
+The source snapshot is 8 November 2026. `scripts/update-big-mac-data.py` downloads The Economist historical and v2 source data, Frankfurter daily FX and World Bank annual FX, computes arithmetic daily cross-rate means, and writes versioned JSON/CSV assets. Run `npm run update:big-mac-data -- --as-of YYYY-MM-DD`; use `--cached` to rebuild from ignored `.cache/big-mac/` downloads. Spot rates attached to the burger survey are never used as annual means. See `big-mac/data/README.md` for exact coverage and transformations.
+
+The app fetches only the FX years needed for the selected endpoints. It does not send entered amounts to an external service.

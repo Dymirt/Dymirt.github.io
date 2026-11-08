@@ -1,12 +1,11 @@
 const translations = {
   "en": {
     "bigMacKicker": "Interactive tool · Open data",
-    "bigMacText": "Compare prices, income and other amounts over time using the price of a Big Mac in Poland as a common reference. Historical observations from 1992 to 2026, with sources and measurement dates.",
+    "bigMacText": "Compare countries, years and currencies using national Big Mac prices and annual average exchange rates. Data from 1986 to 2026, with sources and observation dates.",
     "bigMacResultLabel": "Value over time",
     "bigMacResult": "Two amounts, one reference point.",
-    "bigMacNote": "Prices, property, cars, income and profits. The calculator is in Polish.",
+    "bigMacNote": "Prices, purchases, sales and purchasing power. Available in English, Polish and Italian.",
     "bigMacCta": "Open the calculator ↗",
-
     "metaTitle": "Dmytro Kolida | System development, optimization & recovery",
     "metaDescription": "I combine an entrepreneur's perspective with technical delivery to develop systems, remove bottlenecks and restore control.",
     "ogDescription": "I combine an entrepreneur's perspective with technical delivery to develop systems, remove bottlenecks and restore control.",
@@ -153,12 +152,11 @@ const translations = {
   },
   "pl": {
     "bigMacKicker": "Interaktywne narzędzie · Otwarte dane",
-    "bigMacText": "Porównaj ceny, dochody i inne kwoty w czasie, korzystając z ceny Big Maca w Polsce jako wspólnego punktu odniesienia. Obserwacje historyczne od 1992 do 2026 roku, ze źródłami i datami pomiarów.",
+    "bigMacText": "Porównaj kraje, lata i waluty na podstawie krajowych cen Big Maca i średniorocznych kursów walut. Dane od 1986 do 2026 roku, ze źródłami i datami obserwacji.",
     "bigMacResultLabel": "Wartość w czasie",
     "bigMacResult": "Dwie kwoty, jeden punkt odniesienia.",
-    "bigMacNote": "Ceny, mieszkania, samochody, dochody i zyski. Kalkulator po polsku.",
+    "bigMacNote": "Ceny, zakupy, sprzedaż i siła nabywcza. Wersje EN, PL i IT.",
     "bigMacCta": "Otwórz kalkulator ↗",
-
     "metaTitle": "Dmytro Kolida | Rozwój systemów, optymalizacja i stabilizacja",
     "metaDescription": "Łączę perspektywę przedsiębiorcy z wykonaniem technicznym: rozwijam systemy, usuwam wąskie gardła i pomagam odzyskać kontrolę.",
     "ogDescription": "Łączę perspektywę przedsiębiorcy z wykonaniem technicznym: rozwijam systemy, usuwam wąskie gardła i pomagam odzyskać kontrolę.",
@@ -305,12 +303,11 @@ const translations = {
   },
   "it": {
     "bigMacKicker": "Strumento interattivo · Dati aperti",
-    "bigMacText": "Confronta prezzi, redditi e altri importi nel tempo usando il prezzo del Big Mac in Polonia come riferimento comune. Osservazioni dal 1992 al 2026, con fonti e date di rilevazione.",
+    "bigMacText": "Confronta paesi, anni e valute usando prezzi nazionali del Big Mac e cambi medi annui. Dati dal 1986 al 2026, con fonti e date di rilevazione.",
     "bigMacResultLabel": "Valore nel tempo",
     "bigMacResult": "Due importi, un riferimento comune.",
-    "bigMacNote": "Prezzi, immobili, auto, redditi e profitti. Il calcolatore è in polacco.",
+    "bigMacNote": "Prezzi, acquisti, vendite e potere d’acquisto. Disponibile in EN, PL e IT.",
     "bigMacCta": "Apri il calcolatore ↗",
-
     "metaTitle": "Dmytro Kolida | Sviluppo, ottimizzazione e stabilizzazione dei sistemi",
     "metaDescription": "Unisco la prospettiva imprenditoriale all'esecuzione tecnica per sviluppare sistemi, rimuovere colli di bottiglia e ripristinare il controllo.",
     "ogDescription": "Unisco la prospettiva imprenditoriale all'esecuzione tecnica per sviluppare sistemi, rimuovere colli di bottiglia e ripristinare il controllo.",
