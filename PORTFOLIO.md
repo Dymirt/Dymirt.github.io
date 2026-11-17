@@ -59,3 +59,7 @@ Run `npm run test:layout` to verify that every page contains the current templat
 The source snapshot is 8 November 2026. `scripts/update-big-mac-data.py` downloads The Economist historical and v2 source data, Frankfurter daily FX and World Bank annual FX, computes arithmetic daily cross-rate means, and writes versioned JSON/CSV assets. Run `npm run update:big-mac-data -- --as-of YYYY-MM-DD`; use `--cached` to rebuild from ignored `.cache/big-mac/` downloads. Spot rates attached to the burger survey are never used as annual means. See `big-mac/data/README.md` for exact coverage and transformations.
 
 The app fetches only the FX years needed for the selected endpoints. It does not send entered amounts to an external service.
+
+## November 2026 evidence update
+
+Based on the published GitHub Pages version (origin/main 051e4c2). The original theme, hero, shared navigation, project order, and development / optimization / recovery offer are retained. A short business-experience introduction appears before expertise. Four case studies add repository-derived technical evidence from the root README while retaining their existing business benefits and launch limitations. All additions are translated into English, Polish and Italian.

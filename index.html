@@ -14,7 +14,7 @@
   <title>Dmytro Kolida | System development, optimization &amp; recovery</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>document.documentElement.classList.add('js'); setTimeout(() => { if (!document.documentElement.classList.contains('app-ready')) document.documentElement.classList.remove('js'); }, 2000);</script>
-  <link rel="stylesheet" href="tailwind.css?v=20260719-2">
+  <link rel="stylesheet" href="tailwind.css?v=20261117-evidence">
   <link rel="stylesheet" href="styles.css?v=20261005-1">
   <link rel="stylesheet" href="./shared/site-layout.css?v=20261108-shared">
 </head>
@@ -96,6 +96,13 @@
       </div>
     </section>
 
+    <section class="border-b border-white/10 bg-white/[0.025]" aria-labelledby="business-experience-title">
+      <div class="mx-auto max-w-page px-5 py-10 sm:px-8 lg:px-12">
+        <h2 id="business-experience-title" class="text-2xl font-semibold tracking-tight" data-i18n="businessEarlyTitle">Business experience behind technical decisions.</h2>
+        <p class="mt-4 max-w-4xl text-base leading-relaxed text-fog" data-i18n="businessEarlyText">From 2016 to 2025, I ran an e-commerce business, responsible for sales, costs, tools and daily operations. I bring that perspective to engineering: I assess a change by its effect on the team’s work, risk and business continuity.</p>
+      </div>
+    </section>
+
     <section id="expertise" class="section-shell">
       <div class="section-heading reveal">
         <p class="eyebrow" data-i18n="expertiseEyebrow">01 / Expertise</p>
@@ -157,6 +164,10 @@
             <h3 data-i18n="modernizationTitle">Improving and modernizing older systems</h3>
             <p data-i18n-html="modernizationText">I work with older applications, understand their dependencies and improve how they operate. I add features, integrations and automation, and verify changes before deployment.</p>
             <div class="tag-row"><span>PHP</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>PHPUnit</span><span>CI/CD</span></div>
+            <div class="mt-5 border-t border-white/10 pt-5">
+              <p class="case-kicker" data-i18n="evidenceLabel">Engineering evidence</p>
+              <p class="mt-3 text-sm leading-relaxed text-fog" data-i18n="modernizationEvidence">396 tests and 1,108 assertions; dependencies mapped across 856 PHP files; two deployment environments. Repository evidence and a clean July 2026 run, with one credential-dependent integration test skipped. These are engineering measures, not measured business gains.</p>
+            </div>
           </div>
           <div class="case-result">
             <p data-i18n="measuredEvidence">Business benefit</p>
@@ -172,6 +183,10 @@
             <h3 data-i18n="case1Title">One standard for document imports</h3>
             <p data-i18n-html="case1Text">I standardized document imports across the company. Files with different layouts feed a common structure; operators can correct column mapping. The system remembers proven layouts and flags invalid data.</p>
             <div class="tag-row"><span>CSV / XLS / XLSX</span><span data-i18n="tagCanonicalModel">Flexible column mapping</span><span data-i18n="tagRegistry">Company registry</span><span data-i18n="tagHumanReview">Human approval</span><span data-i18n="tagAudit">Error log</span></div>
+            <div class="mt-5 border-t border-white/10 pt-5">
+              <p class="case-kicker" data-i18n="evidenceLabel">Engineering evidence</p>
+              <p class="mt-3 text-sm leading-relaxed text-fog" data-i18n="importEvidence">A common 59-field format for CSV, XLS and XLSX; company matching checked against 238 examples; duplicate merging covered by 25 focused tests. Production throughput and time saved have not been measured.</p>
+            </div>
           </div>
           <div class="case-result">
             <p data-i18n="engineeringEvidence">What now works</p>
@@ -187,6 +202,10 @@
             <h3 data-i18n="case2Title">Connecting KSeF to a legacy invoicing system</h3>
             <p data-i18n-html="case2Text">I connected an older invoicing system to KSeF. The integration submits invoices, checks their status and finds previous submissions.</p>
             <div class="tag-row"><span>KSeF</span><span>Python</span><span>FastAPI</span><span>PHP</span><span>FA(3) XML</span><span data-i18n="tagDuplicateRecovery">Already-submitted invoices</span></div>
+            <div class="mt-5 border-t border-white/10 pt-5">
+              <p class="case-kicker" data-i18n="evidenceLabel">Engineering evidence</p>
+              <p class="mt-3 text-sm leading-relaxed text-fog" data-i18n="ksefEvidence">Four API endpoints and FA(3) XML generation in a separate Python service, with four focused payment-semantics tests. The integration extends the existing PHP application.</p>
+            </div>
           </div>
           <div class="case-result">
             <p data-i18n="engineeringEvidence">What now works</p>
@@ -202,6 +221,10 @@
             <h3 data-i18n="case4Title">A loyalty-card platform designed and built from scratch</h3>
             <p data-i18n-html="case4Text">I designed and built a platform connecting customer registration, loyalty cards, the sales system, Apple and Google Wallet, and email. I extended it with separate data and settings for each business.</p>
             <div class="tag-row"><span>Django</span><span>Dotykačka</span><span>Apple Wallet</span><span>Google Wallet</span><span>Brevo</span><span>MariaDB</span></div>
+            <div class="mt-5 border-t border-white/10 pt-5">
+              <p class="case-kicker" data-i18n="evidenceLabel">Engineering evidence</p>
+              <p class="mt-3 text-sm leading-relaxed text-fog" data-i18n="loyaltyEvidence">228 automated tests. All 267 customer records and the inventory of 600 physical cards were preserved during the platform expansion. These figures describe the migration scope, not additional businesses launched.</p>
+            </div>
           </div>
           <div class="case-result">
             <p data-i18n="engineeringEvidence">What now works</p>
@@ -345,6 +368,6 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite" data-i18n="emailCopied">Email copied</div>
   <script src="./shared/site-layout.js?v=20261108-positioning"></script>
-  <script src="script.js?v=20261108-world"></script>
+  <script src="script.js?v=20261117-evidence"></script>
 </body>
 </html>

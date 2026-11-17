@@ -148,7 +148,14 @@ const translations = {
     "aiNote": "Company knowledge and data stay within the appropriate access scope.",
     "collaborationText": "Available for defined projects, transformation work and longer roles with clear ownership. I work remotely from Poland and can join on-site when needed.",
     "toolAiList": "Company knowledge · Permission-based access · Data analysis",
-    "contactRole": "System development · Process optimization · Technical crisis management"
+    "contactRole": "System development · Process optimization · Technical crisis management",
+    "businessEarlyTitle": "Business experience behind technical decisions.",
+    "businessEarlyText": "From 2016 to 2025, I ran an e-commerce business, responsible for sales, costs, tools and daily operations. I bring that perspective to engineering: I assess a change by its effect on the team’s work, risk and business continuity.",
+    "evidenceLabel": "Engineering evidence",
+    "modernizationEvidence": "396 tests and 1,108 assertions; dependencies mapped across 856 PHP files; two deployment environments. Repository evidence and a clean July 2026 run, with one credential-dependent integration test skipped. These are engineering measures, not measured business gains.",
+    "importEvidence": "A common 59-field format for CSV, XLS and XLSX; company matching checked against 238 examples; duplicate merging covered by 25 focused tests. Production throughput and time saved have not been measured.",
+    "ksefEvidence": "Four API endpoints and FA(3) XML generation in a separate Python service, with four focused payment-semantics tests. The integration extends the existing PHP application.",
+    "loyaltyEvidence": "228 automated tests. All 267 customer records and the inventory of 600 physical cards were preserved during the platform expansion. These figures describe the migration scope, not additional businesses launched."
   },
   "pl": {
     "bigMacKicker": "Interaktywne narzędzie · Otwarte dane",
@@ -299,7 +306,14 @@ const translations = {
     "aiNote": "Wiedza i dane firmy pozostają w odpowiednim zakresie dostępu.",
     "collaborationText": "Jestem otwarty na określone projekty, prace transformacyjne i dłuższe role z jasną odpowiedzialnością. Pracuję zdalnie z Polski i w razie potrzeby mogę dołączyć na miejscu.",
     "toolAiList": "Wiedza firmy · Dostęp według uprawnień · Analiza danych",
-    "contactRole": "Rozwój systemów · Optymalizacja procesów · Techniczne zarządzanie kryzysowe"
+    "contactRole": "Rozwój systemów · Optymalizacja procesów · Techniczne zarządzanie kryzysowe",
+    "businessEarlyTitle": "Doświadczenie biznesowe za decyzjami technicznymi.",
+    "businessEarlyText": "W latach 2016–2025 prowadziłem e-commerce, odpowiadając za sprzedaż, koszty, narzędzia i codzienne operacje. Tę perspektywę wnoszę do pracy technicznej: oceniam zmianę przez jej wpływ na pracę zespołu, ryzyko i ciągłość działania firmy.",
+    "evidenceLabel": "Dowody techniczne",
+    "modernizationEvidence": "396 testów i 1108 asercji; rozpoznanie zależności w 856 plikach PHP; dwa środowiska wdrożeniowe. Dane z repozytorium i poprawnego uruchomienia testów w lipcu 2026, z pominięciem jednego testu integracji wymagającego poświadczeń. To miary techniczne, nie zmierzony efekt biznesowy.",
+    "importEvidence": "Wspólny format 59 pól dla CSV, XLS i XLSX; dopasowanie firm sprawdzone na 238 przykładach; łączenie duplikatów objęte 25 testami. Wydajność produkcyjna i oszczędność czasu nie zostały zmierzone.",
+    "ksefEvidence": "Cztery endpointy API i generowanie XML FA(3) w oddzielnej usłudze Python oraz cztery testy reguł płatności. Integracja rozszerza istniejącą aplikację PHP.",
+    "loyaltyEvidence": "228 testów automatycznych. Podczas rozbudowy platformy zachowano wszystkie 267 rekordów klientów i stan 600 kart fizycznych. Liczby opisują zakres migracji, nie uruchomienie platformy dla kolejnych firm."
   },
   "it": {
     "bigMacKicker": "Strumento interattivo · Dati aperti",
@@ -450,7 +464,14 @@ const translations = {
     "aiNote": "Le conoscenze e i dati aziendali rispettano i limiti di accesso previsti.",
     "collaborationText": "Sono disponibile per progetti definiti, lavori di trasformazione e ruoli più lunghi con responsabilità chiare. Lavoro da remoto dalla Polonia e posso essere presente sul posto quando serve.",
     "toolAiList": "Conoscenza aziendale · Accesso secondo i permessi · Analisi dei dati",
-    "contactRole": "Sviluppo dei sistemi · Ottimizzazione dei processi · Gestione tecnica delle crisi"
+    "contactRole": "Sviluppo dei sistemi · Ottimizzazione dei processi · Gestione tecnica delle crisi",
+    "businessEarlyTitle": "Esperienza imprenditoriale dietro le decisioni tecniche.",
+    "businessEarlyText": "Dal 2016 al 2025 ho gestito un e-commerce, occupandomi di vendite, costi, strumenti e operazioni quotidiane. Porto questa prospettiva nel lavoro tecnico: valuto ogni modifica per il suo impatto sul team, sui rischi e sulla continuità aziendale.",
+    "evidenceLabel": "Evidenze tecniche",
+    "modernizationEvidence": "396 test e 1.108 asserzioni; dipendenze analizzate in 856 file PHP; due ambienti di rilascio. Dati dal repository e da un’esecuzione riuscita a luglio 2026, con un test di integrazione saltato perché richiedeva credenziali. Sono misure tecniche, non benefici aziendali misurati.",
+    "importEvidence": "Formato comune di 59 campi per CSV, XLS e XLSX; abbinamento aziende verificato su 238 esempi; unione duplicati coperta da 25 test. Prestazioni in produzione e tempo risparmiato non sono stati misurati.",
+    "ksefEvidence": "Quattro endpoint API e generazione XML FA(3) in un servizio Python separato, con quattro test sulle regole di pagamento. L’integrazione estende l’applicazione PHP esistente.",
+    "loyaltyEvidence": "228 test automatici. Durante l’espansione sono stati preservati tutti i 267 record clienti e l’inventario di 600 carte fisiche. Le cifre descrivono la migrazione, non il lancio per altre aziende."
   }
 };
 
