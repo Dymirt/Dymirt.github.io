@@ -63,3 +63,15 @@ The app fetches only the FX years needed for the selected endpoints. It does not
 ## November 2026 evidence update
 
 Based on the published GitHub Pages version (origin/main 051e4c2). The original theme, hero, shared navigation, project order, and development / optimization / recovery offer are retained. A short business-experience introduction appears before expertise. Four case studies add repository-derived technical evidence from the root README while retaining their existing business benefits and launch limitations. All additions are translated into English, Polish and Italian.
+
+## CRM modernization case
+
+The existing legacy-system case now describes the debt-management CRM migration from PHP 5.6 to PHP 8.5, with concise scope and evidence in EN/PL/IT. Source: owner-supplied analysis comparing gama 03e5fcbe with legacy ca400616 (19 February 2025), including a verification report dated 17 November 2026. The CRM source and reports were not independently inspected and its runtime tests were not rerun for this portfolio update. SQL and concurrency measurements retain their scenario boundaries, and the reported broad-task-search regression and five skipped external integrations are disclosed. No client data or private repository links are published.
+
+## Minimal copy
+
+Homepage copy is shortened in all three languages. Duplicate offer cards, generic section introductions and the extended CRM explanation are removed. The three expertise areas, business background, project evidence, SQL measurement scope, test date and skipped integrations remain.
+
+## Marketing refinement
+
+CRM leads the case studies, followed by imports, KSeF, loyalty cards, AI and Real Big Mac. The introduction addresses businesses improving existing systems. Benefit copy accompanies technical evidence; CRM SQL timing labels retain query scope. Contact actions invite a system-problem description and open email with a localized subject. Real Big Mac remains in the projects and is removed from desktop and mobile navigation across the shared layout. Styling is unchanged.
